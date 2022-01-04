@@ -118,58 +118,19 @@
                             <div class="col px-3">
                                 <div class="row py-2 mt-4 mb-3">
                                     <div class="col">
-                                        <p class="mb-0 title">Input PO</p>
+                                        <p class="mb-0 title">Daftar barang yang pernah dibeli</p>
                                         <ol class="breadcrumb">
                                             <li class="breadcrumb-item"><a class="text-hover" href="#">Pembelian</a></li>
-                                            <li class="breadcrumb-item"><a class="active" href="#">Input PO&nbsp;</a></li>
+                                            <li class="breadcrumb-item"><a class="active" href="#">Daftar Pembelian Barang</a></li>
                                         </ol>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 px-3"><label class="form-label"><strong>Informasi PO</strong></label></div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 px-3">
-                                        <div class="row mx-0 bg-white py-3">
-                                            <div class="col-6 px-2">
-                                                <div class="row mb-2">
-                                                    <div class="col-12"><label class="form-label text-muted">No. PO</label><input type="text" class="form-control form-control-sm" placeholder="No. Dokumen PO"></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 px-2">
-                                                <div class="row mb-2">
-                                                    <div class="col-12"><label class="form-label text-muted">Tanggal PO</label><input type="text" class="form-control form-control-sm" placeholder="DD/MM/YYYY"></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <hr class="mt-2 mb-2">
-                                            </div>
-                                            <div class="col-3 px-2"><label class="form-label text-muted">Penerima</label>
-                                                <p class="mb-0 subtitle small text-capitalize">Skytech Lenmarc<br></p>
-                                                <p class="mb-0 description black">Lenmarc Mall Surabaya<br></p>
-                                                <p class="mb-0 description text-muted">08113530030<br></p><a href="#">Ubah</a>
-                                            </div>
-                                            <div class="col-3 px-2"><label class="form-label text-muted">Supplier</label>
-                                                <p class="mb-0 subtitle small text-capitalize">Vernon</p>
-                                                <p class="mb-0 description black">Jl. Letjen Sutoyo 103<br></p>
-                                                <p class="mb-0 description text-muted">0812345678<br></p><a class="px-0 mr-1" href="#">Ubah</a><a class="d-block" onclick="openModal(&#39;modalItemHistory&#39;);" href="#">Riwayat Pembelian Item</a>
-                                            </div>
-                                            <div class="col-6 px-2"><label class="form-label text-muted">Catatan</label><textarea class="form-control no-resize" rows="3" placeholder="Catatan"></textarea></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row mt-3">
-                                    <div class="col-12 px-3"><label class="form-label"><strong>Item PO</strong></label></div>
                                 </div>
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="row">
                                             <div class="col">
-                                                <div class="row mx-0 bg-white py-2">
-                                                    <div class="col pr-0"><input type="text" class="form-control" placeholder="Nama Item"></div>
-                                                    <div class="col-auto">
-                                                        <p class="link-icon browse-icon" onclick="openModal(&#39;modalItem&#39;);"><img src="../assets/img/browse.svg" width="16"></p>
-                                                    </div>
+                                                <div class="row mx-0 py-2" style="background-color: #efeff3;">
+                                                    <div class="col-12 input-group px-2 input-group-sm searchbar"><input type="text" class="form-control" placeholder="Cari Kode / Nama Item"><span class="input-group-text"><img class="icon" src="../assets/img/search.svg" width="10"></span></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -177,112 +138,93 @@
                                 </div>
                                 <div class="row mt-2 mx-0">
                                     <div class="col-12 bg-white">
-                                        <div class="table-responsive table general-table table-sm mb-0">
-                                            <table class="table mt-3">
-                                                <thead class="no-border">
-                                                    <tr class="no-border"></tr>
-                                                </thead>
-                                                <tbody class="no-border">
-                                                    <tr class="sub-header no-top">
-                                                        <td class="col-2">Kode</td>
-                                                        <td class="col-3">Nama</td>
-                                                        <td class="col-1">Qty</td>
-                                                        <td class="text-end col-2 text-right">Harga/Unit<br>(excl ppn)</td>
-                                                        <td class="text-end col-2 text-right">Harga/Unit<br>(incl ppn)</td>
-                                                        <td class="text-end col-2 text-right">Diskon/Unit<br>(incl ppn)</td>
-                                                        <td class="text-end col-2 text-right">Nett/Unit<br>(incl ppn)</td>
-                                                        <td class="text-end col-2 text-right">Total<br>(incl ppn)</td>
+                                        <div class="table-responsive table table-sm mb-0 pt-0">
+                                            <table class="table table-borderless mt-3">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-center" rowspan="2"><input type="checkbox"></td>
+                                                        <td class="text-center" rowspan="2">Nama</td>
+                                                        <td class="text-center" rowspan="2">Kode</td>
+                                                        <td class="text-center col-3" colspan="2">Tanggal</td>
+                                                        <td class="text-center" rowspan="2">Qty</td>
+                                                        <td class="text-center" rowspan="2">Harga Item</td>
+                                                        <td class="text-center" rowspan="2">Supplier</td>
+                                                        <td class="text-center" colspan="3">Stok Gudang</td>
                                                     </tr>
-                                                    <tr class="clickable" onclick="openModal(&#39;modalDetail&#39;)">
-                                                        <td class="col-2">IT-1</td>
-                                                        <td class="col-3">ITEM 1</td>
-                                                        <td class="col-1">2</td>
-                                                        <td class="text-end col-2">10.000</td>
-                                                        <td class="text-end col-2 text-right">11.000</td>
-                                                        <td class="text-end col-2 text-right">0</td>
-                                                        <td class="text-end col-2 text-right">11.000</td>
-                                                        <td class="text-end col-2 text-right">22.000</td>
+                                                    <tr>
+                                                        <td class="text-center">Pembelian</td>
+                                                        <td class="text-center">Penerimaan</td>
+                                                        <td class="text-center">Stok Sekarang</td>
+                                                        <td class="text-center">Minimal Stok</td>
+                                                        <td class="text-center">Rekomendasi Stok</td>
                                                     </tr>
-                                                    <tr class="clickable" onclick="openModal(&#39;modalDetail&#39;)">
-                                                        <td class="col-2">IT-2</td>
-                                                        <td class="col-3">ITEM 2</td>
-                                                        <td class="col-1">2</td>
-                                                        <td class="text-end col-2">10.000</td>
-                                                        <td class="text-end col-2 text-right">10.000</td>
-                                                        <td class="text-end col-2 text-right">0</td>
-                                                        <td class="text-end col-2 text-right">10.000</td>
-                                                        <td class="text-end col-2 text-right">20.000</td>
+                                                    <tr class="clickable">
+                                                        <td class="text-center" onclick="openModal(&#39;modalItemHistory&#39;);"><input type="checkbox"></td>
+                                                        <td>ITEM 1</td>
+                                                        <td class="text-center">IT-1</td>
+                                                        <td class="text-center">22-12-2021</td>
+                                                        <td class="text-center">28-12-2021</td>
+                                                        <td class="text-center">100</td>
+                                                        <td class="text-end">120.000</td>
+                                                        <td class="text-center">Toko ABC</td>
+                                                        <td class="text-center">30</td>
+                                                        <td class="text-center">10</td>
+                                                        <td class="text-center">0</td>
                                                     </tr>
-                                                    <tr class="clickable no-bottom" onclick="openModal(&#39;modalDetail&#39;)">
-                                                        <td class="col-2">IT-3</td>
-                                                        <td class="col-3">ITEM 3</td>
-                                                        <td class="col-1">4</td>
-                                                        <td class="text-end col-2">5.000</td>
-                                                        <td class="text-end col-2 text-right">5.500</td>
-                                                        <td class="text-end col-2 text-right">0</td>
-                                                        <td class="text-end col-2 text-right">5.500</td>
-                                                        <td class="text-end col-2 text-right">22.000</td>
+                                                    <tr class="clickable">
+                                                        <td class="text-center"><input type="checkbox"></td>
+                                                        <td>ITEM 2</td>
+                                                        <td class="text-center">IT-2</td>
+                                                        <td class="text-center">23-12-2021</td>
+                                                        <td class="text-center">28-12-2021</td>
+                                                        <td class="text-center">20</td>
+                                                        <td class="text-end">120.000</td>
+                                                        <td class="text-center">Toko XYZ</td>
+                                                        <td class="text-center">10</td>
+                                                        <td class="text-center">15</td>
+                                                        <td class="text-center">5</td>
+                                                    </tr>
+                                                    <tr class="clickable">
+                                                        <td class="text-center"><input type="checkbox"></td>
+                                                        <td>ITEM 2</td>
+                                                        <td class="text-center">IT-2</td>
+                                                        <td class="text-center">23-12-2021</td>
+                                                        <td class="text-center">28-12-2021</td>
+                                                        <td class="text-center">20</td>
+                                                        <td class="text-end">120.000</td>
+                                                        <td class="text-center">Toko XYZ</td>
+                                                        <td class="text-center">10</td>
+                                                        <td class="text-center">15</td>
+                                                        <td class="text-center">5</td>
+                                                    </tr>
+                                                    <tr class="clickable">
+                                                        <td class="text-center"><input type="checkbox"></td>
+                                                        <td>ITEM 2</td>
+                                                        <td class="text-center">IT-2</td>
+                                                        <td class="text-center">23-12-2021</td>
+                                                        <td class="text-center">28-12-2021</td>
+                                                        <td class="text-center">20</td>
+                                                        <td class="text-end">120.000</td>
+                                                        <td class="text-center">Toko XYZ</td>
+                                                        <td class="text-center">5</td>
+                                                        <td class="text-center">10</td>
+                                                        <td class="text-center">5</td>
+                                                    </tr>
+                                                    <tr class="clickable">
+                                                        <td class="text-center"><input type="checkbox"></td>
+                                                        <td>ITEM 2</td>
+                                                        <td class="text-center">IT-2</td>
+                                                        <td class="text-center">23-12-2021</td>
+                                                        <td class="text-center">28-12-2021</td>
+                                                        <td class="text-center">20</td>
+                                                        <td class="text-end">120.000</td>
+                                                        <td class="text-center">Toko ABC</td>
+                                                        <td class="text-center">10</td>
+                                                        <td class="text-center">15</td>
+                                                        <td class="text-center">5</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row mt-2 mx-0">
-                                    <div class="col-12 bg-white">
-                                        <div class="table-responsive table general-table table-sm mb-0">
-                                            <table class="table mt-3">
-                                                <thead class="no-border">
-                                                    <tr class="no-border"></tr>
-                                                </thead>
-                                                <tbody class="no-border">
-                                                    <tr>
-                                                        <td class="text-start col-4" colspan="2">Total Sebelum Pajak</td>
-                                                        <td class="text-end col-4 text-right"><input type="text" class="form-control form-control-sm" style="text-align: right;" placeholder="Nominal" value="60.000"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-start col-4" colspan="2">Cash Diskon (opsional)</td>
-                                                        <td class="text-end col-2 text-right"><input type="text" class="form-control form-control-sm" style="text-align: right;" placeholder="Nominal" value="6.000"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-start col-3" colspan="2">Grand Total (excl ppn)</td>
-                                                        <td class="text-end col-4 text-right"><input type="text" class="form-control form-control-sm" style="text-align: right;" placeholder="Nominal" value="54.000"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-start col-4">PPN</td>
-                                                        <td class="text-end col-2 text-right">
-                                                            <div class="input-group"><input type="text" class="form-control form-control-sm" style="text-align: right;" placeholder="Nominal" value="10">
-                                                                <div class="input-group-append">
-                                                                    <p class="input-group-text mb-0" style="border-bottom-left-radius: 0;border-top-left-radius: 0;">%</p>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td class="text-start col-2"><input type="text" class="form-control form-control-sm" style="text-align: right;" placeholder="Nominal" value="5.400"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-start col-4" colspan="2"><strong>Grand Total (incl ppn)</strong></td>
-                                                        <td class="text-end col-4 text-right"><input type="text" class="form-control form-control-sm" style="text-align: right;" placeholder="Nominal" value="59.400"></td>
-                                                    </tr>
-                                                    <tr class="no-bottom">
-                                                        <td class="text-start col-4" colspan="2">Uang Muka (opsional)</td>
-                                                        <td class="text-end col-4 text-right"><input type="text" class="form-control form-control-sm" style="text-align: right;" placeholder="Nominal" value="9.400"></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row mt-3">
-                                    <div class="col-12 px-3"><label class="form-label"><strong>Lampiran&nbsp;</strong></label></div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 px-3">
-                                        <div class="row mx-0 bg-white py-3">
-                                            <div class="col-12 px-2">
-                                                <div class="row mb-2">
-                                                    <div class="col-12 mt-3"><label class="form-label text-muted">Tambahkan Tagging Dokumen (opsional)&nbsp;</label><input type="text" class="form-control mb-2" placeholder="Isi dengan format &quot;judul:nilai&quot;, tekan enter untuk menambahkan"><span class="link-icon small py-1 px-2 tag">Judul Tag : Nilai Tag | X</span></div>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -416,7 +358,7 @@
         <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Daftar Item dari Supplier Vernon</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h4 class="modal-title">Daftar Item dari Supplier ABC</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="row mx-0 mb-3">
