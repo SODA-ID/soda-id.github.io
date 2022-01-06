@@ -7,9 +7,7 @@
     <title>vhub</title>
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="../assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="../assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="../assets/css/styles.min.css">
 </head>
 
@@ -48,17 +46,30 @@
                     </div>
                 </div>
                 <div class="content scroll">
-                    <div id="menu-transaction" class="row mx-0">
+                    <div id="menu-transaction-1" class="row mx-0">
                         <div class="col-12 pt-2 pb-1">
                             <p class="mb-0 description">Pembelian</p>
                         </div>
                     </div>
+                    <div class="dropend position-absolute" style="width: 175px;"><a class="btn btn-link text-start link-dark minititle px-2 ml-2" aria-expanded="false" data-bs-toggle="dropdown" role="button" style="width: 165px;">&nbsp;Cari Barang</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" onclick="location.href=&#39;/PO/product-create.html&#39;">Tambah Barang</a><a class="dropdown-item" onclick="location.href=&#39;/PO/product-new.html&#39;">Barang Baru</a><a class="dropdown-item" onclick="location.href=&#39;/PO/searchproduct.html&#39;">Barang Lama</a></div>
+                    </div>
                     <div class="row mx-0 icon-wrapper">
                         <div class="col py-2 clickable">
-                            <p class="mb-0 minititle">Cari Barang<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
+                            <p class="mb-0 minititle"><span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
+                        </div>
+                    </div>
+                    <div class="row mx-0 icon-wrapper" onclick="location.href=&#39;/PO/cart.html&#39;">
+                        <div class="col py-2 clickable">
+                            <p class="mb-0 minititle">Keranjang Barang<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
                         </div>
                     </div>
                     <div class="row mx-0 icon-wrapper">
+                        <div class="col py-2 clickable">
+                            <p class="mb-0 minititle">Lihat PO<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
+                        </div>
+                    </div>
+                    <div class="row mx-0 icon-wrapper" onclick="location.href=&#39;/PO/create.html&#39;">
                         <div class="col py-2 clickable">
                             <p class="mb-0 minititle">Input PO<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
                         </div>
@@ -68,47 +79,12 @@
                             <p class="mb-0 minititle">Batalkan PO<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
                         </div>
                     </div>
-                    <div id="menu-catalogue" class="row mx-0">
-                        <div class="col-12 pt-2 pb-1">
-                            <p class="mb-0 description">Invoice</p>
-                        </div>
-                    </div>
-                    <div class="row mx-0 icon-wrapper">
+                    <div class="row mx-0 icon-wrapper" onclick="location.href=&#39;/Product/hpp.html&#39;">
                         <div class="col py-2 clickable">
-                            <p class="mb-0 minititle">Lihat Invoice<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
+                            <p class="mb-0 minititle">Check HPP<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
                         </div>
                     </div>
-                    <div class="row mx-0 icon-wrapper">
-                        <div class="col py-2 clickable">
-                            <p class="mb-0 minititle">Tambah Invoice<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
-                        </div>
-                    </div>
-                    <div class="row mx-0 icon-wrapper">
-                        <div class="col py-2 clickable">
-                            <p class="mb-0 minititle">Batalkan Invoice<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
-                        </div>
-                    </div>
-                    <div id="menu-transaction" class="row mx-0">
-                        <div class="col-12 pt-2 pb-1">
-                            <p class="mb-0 description">Pembayaran</p>
-                        </div>
-                    </div>
-                    <div class="row mx-0 icon-wrapper">
-                        <div class="col py-2 clickable">
-                            <p class="mb-0 minititle">Lihat Pembayaran<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
-                        </div>
-                    </div>
-                    <div class="row mx-0 icon-wrapper">
-                        <div class="col py-2 clickable">
-                            <p class="mb-0 minititle">Bayar Invoice<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
-                        </div>
-                    </div>
-                    <div class="row mx-0 icon-wrapper">
-                        <div class="col py-2 clickable">
-                            <p class="mb-0 minititle">Bayar Lain Lain<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
-                        </div>
-                    </div>
-                    <div id="menu-transaction-2" class="row mx-0">
+                    <div id="menu-transaction-5" class="row mx-0">
                         <div class="col-12 pt-2 pb-1"></div>
                     </div>
                 </div>
@@ -120,87 +96,139 @@
                             <div class="col px-3">
                                 <div class="row py-2 mt-4 mb-3">
                                     <div class="col">
-                                        <p class="mb-0 title">Daftar HPP</p>
+                                        <p class="mb-0 title">Daftar Check HPP</p>
                                         <ol class="breadcrumb">
                                             <li class="breadcrumb-item"><a class="text-hover" href="#">Produk</a></li>
-                                            <li class="breadcrumb-item"><a class="active" href="#">Daftar HPP</a></li>
+                                            <li class="breadcrumb-item"><a class="active" href="#">Daftar Check HPP</a></li>
                                         </ol>
                                     </div>
                                 </div>
+                                <div class="row mt-3">
+                                    <div class="col px-3">
+                                        <div class="card border-0">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <p class="mb-0 subtitle d-inline">Total Item Harga Naik</p>
+                                                        <p class="mb-0 subtitle float-end d-inline">30</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><label class="form-label"></label>
+                                    </div>
+                                    <div class="col px-3">
+                                        <div class="card border-0">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <p class="mb-0 d-inline">Total Item Harga Turun</p>
+                                                        <p class="mb-0 subtitle float-end d-inline">30</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="row mx-0 py-2" style="background-color: #efeff3;">
-                                    <div class="col-12 input-group px-2 input-group-sm searchbar"><input type="text" class="form-control" placeholder="Cari Kode / Nama Item"><input type="text" class="form-control" placeholder="Cari Kode / Nama Item"><span class="input-group-text"><img class="icon" src="../assets/img/search.svg" width="10"></span></div>
+                                    <div class="col-12 input-group px-2 input-group-sm searchbar"><input type="text" class="form-control" placeholder="Cari Kode / Nama Item"><span class="input-group-text"><img class="icon" src="../assets/img/search.svg" width="10"></span></div>
                                 </div>
                                 <div class="row mt-2 mx-0">
                                     <div class="col-12 bg-white">
-                                        <div class="table-responsive table general-table table-sm mb-0">
+                                        <div class="table-responsive table general-table table-sm mb-0" style="border-color: rgb(222,224,226);">
                                             <table class="table mt-3">
-                                                <thead class="no-border">
-                                                    <tr class="no-border"></tr>
-                                                </thead>
                                                 <tbody class="no-border">
                                                     <tr class="sub-header no-top">
-                                                        <td>Kode</td>
-                                                        <td class="col-2">Nama</td>
-                                                        <td class="text-center">Tanggal Pembelian</td>
-                                                        <td class="text-end col-2">Harga Beli</td>
-                                                        <td class="text-end" style="text-align: right;">Harga HPP</td>
-                                                        <td class="text-end col-2 text-right" style="text-align: right;">Harga Jual</td>
-                                                        <td class="text-center text-right"></td>
+                                                        <td class="col-2" rowspan="2">Nama</td>
+                                                        <td rowspan="2">Kode</td>
+                                                        <td class="text-center" colspan="3">Pembelian Terakhir</td>
+                                                        <td class="text-center" style="text-align: right;" colspan="4">Harga Satuan</td>
+                                                        <td class="text-end text-right" style="text-align: right;" rowspan="2">HPP</td>
+                                                        <td class="text-end text-right" style="text-align: right;" rowspan="2">Margin (10%)</td>
+                                                        <td class="text-end text-right" rowspan="2">Harga Jual</td>
                                                     </tr>
-                                                    <tr class="table-warning clickable" onclick="openModal(&#39;modalDetail&#39;)">
-                                                        <td>IT-1</td>
+                                                    <tr class="sub-header no-top">
+                                                        <td class="text-center">Tanggal</td>
+                                                        <td class="text-center">Harga</td>
+                                                        <td class="text-center">Supplier</td>
+                                                        <td class="text-end">Harga Beli</td>
+                                                        <td class="text-end">Ongkir</td>
+                                                        <td class="text-end">PPN</td>
+                                                        <td class="text-end">Packing</td>
+                                                    </tr>
+                                                    <tr class="table-warning clickable">
                                                         <td class="col-2">ITEM 1</td>
+                                                        <td>IT-1</td>
                                                         <td class="text-center">22-12-2021</td>
-                                                        <td class="text-end">22.000<i class="fas fa-angle-up d-inline float-start text-danger px-1" style="font-size: 16px;"></i>
-                                                            <p class="d-inline mb-0 float-start pl-2 text-small text-secondary">(20.000)</p>
-                                                        </td>
-                                                        <td class="text-end">23.000</td>
-                                                        <td class="text-end">24.000</td>
-                                                        <td class="text-center"><a href="#">Ubah</a></td>
-                                                    </tr>
-                                                    <tr class="clickable" onclick="openModal(&#39;modalDetail&#39;)">
-                                                        <td>IT-2</td>
-                                                        <td class="col-2">ITEM 2</td>
-                                                        <td class="text-center">22-12-2021</td>
-                                                        <td class="text-end">21.000<i class="fas fa-angle-down d-inline float-start text-success px-1" style="font-size: 16px;"></i>
-                                                            <p class="d-inline mb-0 float-start pl-2 text-small text-secondary">(22.000)</p>
-                                                        </td>
+                                                        <td class="text-end">20.000</td>
+                                                        <td class="text-center">PT ABC</td>
                                                         <td class="text-end">22.000</td>
-                                                        <td class="text-end">23.000</td>
-                                                        <td class="text-center"><a href="#">Ubah</a></td>
+                                                        <td class="text-end">12.000</td>
+                                                        <td class="text-end">2.200</td>
+                                                        <td class="text-end">5.000</td>
+                                                        <td class="text-end">41.200</td>
+                                                        <td class="text-end">10</td>
+                                                        <td class="text-end">45.320</td>
+                                                        <td class="text-center"><a href="#">Riwayat</a></td>
                                                     </tr>
-                                                    <tr class="table-warning clickable no-bottom" onclick="openModal(&#39;modalDetail&#39;)">
-                                                        <td>IT-3</td>
-                                                        <td class="col-2">ITEM 3</td>
-                                                        <td class="text-center">04-12-2021</td>
-                                                        <td class="text-end">24.000<i class="fas fa-angle-up d-inline float-start text-danger px-1" style="font-size: 16px;"></i>
-                                                            <p class="d-inline mb-0 float-start pl-2 text-small text-secondary">(20.000)</p>
-                                                        </td>
-                                                        <td class="text-end">25.000</td>
-                                                        <td class="text-end">26.000</td>
-                                                        <td class="text-center"><a href="#">Ubah</a></td>
+                                                    <tr class="clickable">
+                                                        <td class="col-2">ITEM 2</td>
+                                                        <td>IT-2</td>
+                                                        <td class="text-center">22-12-2021</td>
+                                                        <td class="text-end">22.000</td>
+                                                        <td class="text-center">PT ABC</td>
+                                                        <td class="text-end">21.000</td>
+                                                        <td class="text-end">8.000</td>
+                                                        <td class="text-end">2.000</td>
+                                                        <td class="text-end">4.000</td>
+                                                        <td class="text-end">35.000</td>
+                                                        <td class="text-end">10</td>
+                                                        <td class="text-end">38.500</td>
+                                                        <td class="text-center"><a href="#">Riwayat</a></td>
                                                     </tr>
-                                                    <tr class="table-warning clickable no-bottom" onclick="openModal(&#39;modalDetail&#39;)">
-                                                        <td>IT-3</td>
+                                                    <tr class="table-warning clickable no-bottom">
                                                         <td class="col-2">ITEM 3</td>
+                                                        <td>IT-3</td>
                                                         <td class="text-center">04-12-2021</td>
-                                                        <td class="text-end">24.000<i class="fas fa-angle-up d-inline float-start text-danger px-1" style="font-size: 16px;"></i>
-                                                            <p class="d-inline mb-0 float-start pl-2 text-small text-secondary">(21.000)</p>
-                                                        </td>
-                                                        <td class="text-end">25.000</td>
-                                                        <td class="text-end">26.000</td>
-                                                        <td class="text-center"><a href="#">Ubah</a></td>
+                                                        <td class="text-end">21.000</td>
+                                                        <td class="text-center">PT XYZ</td>
+                                                        <td class="text-end">24.000</td>
+                                                        <td class="text-end">14.000</td>
+                                                        <td class="text-end">2.000</td>
+                                                        <td class="text-end">4.000</td>
+                                                        <td class="text-end">44.000</td>
+                                                        <td class="text-end">10</td>
+                                                        <td class="text-end">48.400</td>
+                                                        <td class="text-center"><a href="#">Riwayat</a></td>
                                                     </tr>
-                                                    <tr class="clickable no-bottom" onclick="openModal(&#39;modalDetail&#39;)">
-                                                        <td>IT-3</td>
+                                                    <tr class="table-warning clickable no-bottom">
                                                         <td class="col-2">ITEM 3</td>
+                                                        <td>IT-3</td>
                                                         <td class="text-center">04-12-2021</td>
-                                                        <td class="text-end">24.000<i class="fas fa-minus d-inline float-start text-s px-1" style="font-size: 13px;"></i>
-                                                            <p class="d-inline mb-0 float-start pl-2 text-small text-secondary">(24.000)</p>
-                                                        </td>
-                                                        <td class="text-end">25.000</td>
-                                                        <td class="text-end">26.000</td>
-                                                        <td class="text-center"><a href="#">Ubah</a></td>
+                                                        <td class="text-end">21.000</td>
+                                                        <td class="text-center">PT XYZ</td>
+                                                        <td class="text-end">24.000</td>
+                                                        <td class="text-end">12.000</td>
+                                                        <td class="text-end">2.000</td>
+                                                        <td class="text-end">4.000</td>
+                                                        <td class="text-end">42.000</td>
+                                                        <td class="text-end">10</td>
+                                                        <td class="text-end">46.200</td>
+                                                        <td class="text-center"><a href="#">Riwayat</a></td>
+                                                    </tr>
+                                                    <tr class="clickable no-bottom">
+                                                        <td class="col-2">ITEM 3</td>
+                                                        <td>IT-3</td>
+                                                        <td class="text-center">04-12-2021</td>
+                                                        <td class="text-end">22.000</td>
+                                                        <td class="text-center">PT ASD</td>
+                                                        <td class="text-end">24.000</td>
+                                                        <td class="text-end">12.000</td>
+                                                        <td class="text-end">2.000</td>
+                                                        <td class="text-end">4.000</td>
+                                                        <td class="text-end">42.000</td>
+                                                        <td class="text-end">10</td>
+                                                        <td class="text-end">46.200</td>
+                                                        <td class="text-center"><a href="#">Riwayat</a></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
