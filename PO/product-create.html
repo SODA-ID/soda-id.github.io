@@ -93,110 +93,62 @@
                             <div class="col px-3 position-relative">
                                 <div class="row py-2 mt-4 mb-3">
                                     <div class="col">
-                                        <p class="mb-0 title">Daftar barang yang pernah dibeli</p>
+                                        <p class="mb-0 title">Tambah Barang Baru</p>
                                         <ol class="breadcrumb">
                                             <li class="breadcrumb-item"><a class="text-hover" href="#">Pembelian</a></li>
-                                            <li class="breadcrumb-item"><a class="active" href="#">Daftar Pembelian Barang</a></li>
+                                            <li class="breadcrumb-item"><a class="active" href="#">Tambah Barang Baru</a></li>
                                         </ol>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="row mx-0 py-2" style="background-color: #efeff3;">
-                                                    <div class="col-12 input-group px-2 input-group-sm searchbar"><input type="text" class="form-control" placeholder="Cari Kode / Nama Item"><span class="input-group-text"><img class="icon" src="../assets/img/search.svg" width="10"></span></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="row mt-2 mx-0">
-                                    <div class="col-12 bg-white">
-                                        <div class="table-responsive table table-sm mb-0 pt-0">
-                                            <table class="table table-borderless mt-3">
-                                                <tbody>
+                                    <div class="col-12">
+                                        <div class="table-responsive table general-table table-sm mb-0">
+                                            <table class="table mt-3">
+                                                <thead class="no-border">
+                                                    <tr class="no-border"></tr>
+                                                </thead>
+                                                <tbody class="no-border">
                                                     <tr>
-                                                        <td class="text-center" rowspan="2"><input type="checkbox"></td>
-                                                        <td class="text-start" rowspan="2">Nama</td>
-                                                        <td class="text-center" rowspan="2">Kode</td>
-                                                        <td class="text-center col-3" colspan="2">Tanggal</td>
-                                                        <td class="text-end" rowspan="2">Qty</td>
-                                                        <td class="text-end" rowspan="2">Harga Item</td>
-                                                        <td class="text-center" rowspan="2">Supplier<i class="fa fa-sort mx-1"></i></td>
-                                                        <td class="text-center" colspan="3">Stok Gudang</td>
+                                                        <td class="text-start col-2">Jenis Barang</td>
+                                                        <td class="text-end col-4 text-right"><input type="text" class="form-control form-control-sm" placeholder="Jenis Barang"></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="text-center">Pembelian</td>
-                                                        <td class="text-center">Penerimaan</td>
-                                                        <td class="text-end">Sekarang<i class="fa fa-sort mx-1"></i></td>
-                                                        <td class="text-end">Minimal<i class="fa fa-sort mx-1"></i></td>
-                                                        <td class="text-end">Rekomendasi<i class="fa fa-sort mx-1"></i></td>
+                                                        <td class="text-start col-2">Kode Barang</td>
+                                                        <td class="text-end col-2 text-right"><input type="text" class="form-control form-control-sm" placeholder="Kode Barang"></td>
                                                     </tr>
-                                                    <tr class="clickable">
-                                                        <td class="text-center"><input type="checkbox" onclick="openModal(&#39;modalProductSupplier&#39;);"></td>
-                                                        <td>ITEM 1</td>
-                                                        <td class="text-center">IT-1</td>
-                                                        <td class="text-center">22-12-2021</td>
-                                                        <td class="text-center">28-12-2021</td>
-                                                        <td class="text-end">100</td>
-                                                        <td class="text-end">120.000</td>
-                                                        <td class="text-center">Toko ABC</td>
-                                                        <td class="text-end">30</td>
-                                                        <td class="text-end">10</td>
-                                                        <td class="text-end">0</td>
+                                                    <tr>
+                                                        <td class="text-start col-2" colspan="">Nama Barang</td>
+                                                        <td class="text-end col-4 text-right"><input type="text" class="form-control form-control-sm" placeholder="Nama Barang"></td>
                                                     </tr>
-                                                    <tr class="clickable">
-                                                        <td class="text-center"><input type="checkbox" onclick="openModal(&#39;modalProductSupplier&#39;);"></td>
-                                                        <td>ITEM 2</td>
-                                                        <td class="text-center">IT-2</td>
-                                                        <td class="text-center">23-12-2021</td>
-                                                        <td class="text-center">28-12-2021</td>
-                                                        <td class="text-end">20</td>
-                                                        <td class="text-end">120.000</td>
-                                                        <td class="text-center">Toko XYZ</td>
-                                                        <td class="text-end">10</td>
-                                                        <td class="text-end">15</td>
-                                                        <td class="text-end">5</td>
+                                                    <tr>
+                                                        <td class="text-start col-2">Spesifikasi Barang</td>
+                                                        <td class="text-start col-2"><textarea class="form-control form-control-sm" rows="3" style="resize:none;" placeholder="Spesifikasi Barang"></textarea></td>
                                                     </tr>
-                                                    <tr class="clickable">
-                                                        <td class="text-center"><input type="checkbox" onclick="openModal(&#39;modalProductSupplier&#39;);"></td>
-                                                        <td>ITEM 2</td>
-                                                        <td class="text-center">IT-2</td>
-                                                        <td class="text-center">23-12-2021</td>
-                                                        <td class="text-center">28-12-2021</td>
-                                                        <td class="text-end">20</td>
-                                                        <td class="text-end">120.000</td>
-                                                        <td class="text-center">Toko XYZ</td>
-                                                        <td class="text-end">10</td>
-                                                        <td class="text-end">15</td>
-                                                        <td class="text-end">5</td>
+                                                    <tr>
+                                                        <td class="text-start col-2">Kelompok</td>
+                                                        <td class="text-end col-4 text-right"><input type="text" class="form-control form-control-sm" placeholder="Nominal"></td>
                                                     </tr>
-                                                    <tr class="clickable">
-                                                        <td class="text-center" click="openModal('modalWarning');"><input type="checkbox" onclick="openModal(&#39;modalProductSupplier&#39;);"></td>
-                                                        <td>ITEM 2</td>
-                                                        <td class="text-center">IT-2</td>
-                                                        <td class="text-center">23-12-2021</td>
-                                                        <td class="text-center">28-12-2021</td>
-                                                        <td class="text-end">20</td>
-                                                        <td class="text-end">120.000</td>
-                                                        <td class="text-center">Toko XYZ</td>
-                                                        <td class="text-end">5</td>
-                                                        <td class="text-end">10</td>
-                                                        <td class="text-end">5</td>
+                                                    <tr class="no-bottom">
+                                                        <td class="text-start col-2">Jenis Pajak</td>
+                                                        <td class="text-end col-4 text-right"><input type="text" class="form-control form-control-sm" placeholder="Pilih"></td>
                                                     </tr>
-                                                    <tr class="clickable">
-                                                        <td class="text-center"><input type="checkbox" onclick="openModal(&#39;modalProductSupplier&#39;);"></td>
-                                                        <td>ITEM 2</td>
-                                                        <td class="text-center">IT-2</td>
-                                                        <td class="text-center">23-12-2021</td>
-                                                        <td class="text-center">28-12-2021</td>
-                                                        <td class="text-end">20</td>
-                                                        <td class="text-end">120.000</td>
-                                                        <td class="text-center">Toko ABC</td>
-                                                        <td class="text-end">10</td>
-                                                        <td class="text-end">15</td>
-                                                        <td class="text-end">5</td>
+                                                    <tr class="no-bottom">
+                                                        <td class="text-start col-2">Margin</td>
+                                                        <td class="text-end col-2 text-right">
+                                                            <div class="input-group"><input type="text" class="form-control form-control-sm" placeholder="Nominal" value="10">
+                                                                <div class="input-group-append">
+                                                                    <p class="input-group-text mb-0" style="border-bottom-left-radius: 0;border-top-left-radius: 0;">%</p>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="no-bottom">
+                                                        <td class="text-start col-2">Jenis Pajak</td>
+                                                        <td class="text-end col-4 text-right"><input type="text" class="form-control form-control-sm" placeholder="Pilih"></td>
+                                                    </tr>
+                                                    <tr class="no-bottom">
+                                                        <td class="text-start col-2">Gambar</td>
+                                                        <td class="text-end col-4 text-start"><img class="float-start" src="../assets/img/Screen%20Shot%202022-01-06%20at%2007.54.16.png" width="680px"></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -208,7 +160,7 @@
                                         <div class="row">
                                             <div class="col">
                                                 <div class="row mx-0 py-2 bg-white">
-                                                    <div class="justify-content-end col-12 input-group px-2 input-group-sm searchbar"><a class="btn btn-primary px-3" role="button" onclick="location.href=&#39;/PO/cart.html&#39;">Lihat Keranjang Pembelian</a></div>
+                                                    <div class="justify-content-end col-12 input-group px-2 input-group-sm searchbar"><a class="btn btn-primary px-3" role="button" onclick="location.href=&#39;/PO/cart.html&#39;">Tambah Barang</a></div>
                                                 </div>
                                             </div>
                                         </div>
