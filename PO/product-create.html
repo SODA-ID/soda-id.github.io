@@ -71,7 +71,7 @@
                             <p class="mb-0 minititle">Lihat PO<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
                         </div>
                     </div>
-                    <div class="row mx-0 icon-wrapper">
+                    <div class="row mx-0 icon-wrapper" onclick="location.href=&#39;/PO/create.html&#39;">
                         <div class="col py-2 clickable">
                             <p class="mb-0 minititle">Input PO<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
                         </div>
@@ -110,7 +110,10 @@
                                                 <tbody class="no-border">
                                                     <tr>
                                                         <td class="text-start col-2">Jenis Barang</td>
-                                                        <td class="text-end col-4 text-right"><input type="text" class="form-control form-control-sm" placeholder="Jenis Barang"></td>
+                                                        <td class="text-end col-4 text-right"><select class="form-select form-select-sm" placeholder="Pilih" value="Pilih">
+                                                                <option value="12" selected="">Produk</option>
+                                                                <option value="13">Jasa</option>
+                                                            </select></td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-start col-2">Kode Barang</td>
@@ -126,11 +129,20 @@
                                                     </tr>
                                                     <tr>
                                                         <td class="text-start col-2">Kelompok</td>
-                                                        <td class="text-end col-4 text-right"><input type="text" class="form-control form-control-sm" placeholder="Nominal"></td>
+                                                        <td class="text-end col-4 text-right"><select class="form-select form-select-sm" placeholder="Pilih" value="Pilih">
+                                                                <option value="12" selected="">Smartphone</option>
+                                                                <option value="14">Laptop</option>
+                                                                <option value="15">Printer</option>
+                                                                <option value="16">Monitor</option>
+                                                                <option value="13">Jasa</option>
+                                                            </select></td>
                                                     </tr>
                                                     <tr class="no-bottom">
                                                         <td class="text-start col-2">Jenis Pajak</td>
-                                                        <td class="text-end col-4 text-right"><input type="text" class="form-control form-control-sm" placeholder="Pilih"></td>
+                                                        <td class="text-end col-4 text-right"><select class="form-select form-select-sm" placeholder="Pilih" value="Pilih">
+                                                                <option value="12">PPN</option>
+                                                                <option value="13">FREE</option>
+                                                            </select></td>
                                                     </tr>
                                                     <tr class="no-bottom">
                                                         <td class="text-start col-2">Margin</td>
@@ -143,8 +155,8 @@
                                                         </td>
                                                     </tr>
                                                     <tr class="no-bottom">
-                                                        <td class="text-start col-2">Jenis Pajak</td>
-                                                        <td class="text-end col-4 text-right"><input type="text" class="form-control form-control-sm" placeholder="Pilih"></td>
+                                                        <td class="text-start col-2">Estimasi Berat</td>
+                                                        <td class="text-end col-4 text-right"><input type="text" class="form-control form-control-sm" placeholder="Estimasi Berat"></td>
                                                     </tr>
                                                     <tr class="no-bottom">
                                                         <td class="text-start col-2">Gambar</td>
@@ -305,7 +317,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer"><button class="btn btn-primary btn-block w-100" type="button" onclick="openModal(&#39;modalDetail&#39;);">Iya, Tambahkan Barang ke Keranjang</button><button class="btn btn-light btn-block w-100" type="button" onclick="closeModal(&#39;modalProductSupplier&#39;)">Tidak, Hanya Tambah Barang Saja</button></div>
+                <div class="modal-footer"><button class="btn btn-primary btn-block w-100" type="button" onclick="openModal(&#39;modalDetail&#39;);">Iya, Tambahkan Barang ke Keranjang</button><button class="btn btn-light btn-block w-100" type="button" onclick="closeModal(&#39;modalProductSupplier&#39;)">Tidak, Hanya Simpan Barang Saja</button></div>
             </div>
         </div>
     </div>
