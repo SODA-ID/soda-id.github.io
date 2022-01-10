@@ -7,9 +7,7 @@
     <title>vhub</title>
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="../assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="../assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="../assets/css/styles.min.css">
 </head>
 
@@ -54,7 +52,7 @@
                         </div>
                     </div>
                     <div class="dropend position-absolute" style="width: 175px;"><a class="btn btn-link text-start link-dark minititle px-2 ml-2" aria-expanded="false" data-bs-toggle="dropdown" role="button" style="width: 165px;">&nbsp;Cari Item</a>
-                        <div class="dropdown-menu"><a class="dropdown-item" onclick="location.href=&#39;/PO/product-create.html&#39;">Tambah Item</a><a class="dropdown-item" onclick="location.href=&#39;/PO/product-new.html&#39;">Item Baru</a><a class="dropdown-item" onclick="location.href=&#39;/PO/searchproduct.html&#39;">Item Lama</a></div>
+                        <div class="dropdown-menu"><a class="dropdown-item" onclick="location.href=&#39;/PO/product-new.html&#39;">Item Baru</a><a class="dropdown-item" onclick="location.href=&#39;/PO/searchproduct.html&#39;">Item Lama</a></div>
                     </div>
                     <div class="row mx-0 icon-wrapper">
                         <div class="col py-2 clickable">
@@ -121,7 +119,7 @@
                     <div>
                         <div class="row mx-0 mb-5 pb-4">
                             <div class="col px-3 position-relative">
-                                <div class="row py-2 mt-4 mb-3">
+                                <div class="row py-2 mt-4 mb-3" onclick="openModal(&#39;modalFirstItem&#39;)">
                                     <div class="col">
                                         <p class="mb-0 title">Keranjang Pembelian</p>
                                         <ol class="breadcrumb">
@@ -130,9 +128,16 @@
                                         </ol>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col"><label class="form-label"><strong>Item Keranjang Tidak Ada Supplier</strong></label></div>
-                                    <div class="text-end col"><label class="form-label mx-3"><strong>Total 1.920.000</strong></label><button class="btn btn-primary" type="button" onclick="location.href=&#39;/PO/create.html&#39;">Buat PO Item Ini</button></div>
+                                <div class="row mt-3">
+                                    <div class="col"><label class="form-label"><strong>Keranjang Item Supplier Toko ABC</strong></label>
+                                        <div class="row mb-4">
+                                            <div class="col pl-2">
+                                                <p class="description mb-0">Alamat</p>
+                                                <p class="subtitle small mb-2">Jln. Merdeka No. 9, Surabaya</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-end col"><label class="form-label mx-2"><strong>Total 1.680.000</strong></label><button class="btn btn-primary" type="button" onclick="location.href=&#39;/PO/create.html&#39;">Buat PO dari Supplier</button></div>
                                 </div>
                                 <div class="row mt-2 mx-0 mb-3">
                                     <div class="col-12 bg-white">
@@ -140,67 +145,59 @@
                                             <table class="table table-borderless mt-3">
                                                 <tbody>
                                                     <tr>
-                                                        <td class="text-center" rowspan="2"></td>
                                                         <td class="text-start">Nama</td>
                                                         <td class="text-center">Kode</td>
+                                                        <td class="text-center">Supplier</td>
                                                         <td class="text-end">Qty</td>
-                                                        <td class="text-end" rowspan="2">Harga/Unit</td>
-                                                        <td class="text-end" rowspan="2">Total Sub Harga</td>
+                                                        <td class="text-end">Harga/Unit</td>
+                                                        <td class="text-end">Total Sub Harga</td>
+                                                        <td class="text-end col"></td>
                                                     </tr>
                                                     <tr></tr>
                                                     <tr class="clickable" onclick="openModal(&#39;modalDetail&#39;);">
-                                                        <td class="text-center"></td>
                                                         <td>ITEM 1<img class="img-fluid mx-2 float-start" src="../assets/img/7fc4f9f6c04863bc4d3555f13a0fc602.jpg" width="48px"></td>
                                                         <td class="text-center">IT-1</td>
+                                                        <td class="text-center">Toko ABC</td>
                                                         <td class="text-end">100</td>
                                                         <td class="text-end">120.000</td>
                                                         <td class="text-end">1.200.000</td>
-                                                        <td class="text-center"><a class="link-danger" href="#"><i class="fa fa-remove border-danger text-danger"></i>&nbsp;Hapus</a>&nbsp; |<a class="link-primary px-1" href="#">&nbsp;Pilih Supplier</a></td>
+                                                        <td class="text-center"><a class="link-danger" href="#"><i class="fa fa-remove border-danger text-danger"></i>&nbsp;Hapus</a></td>
                                                     </tr>
                                                     <tr class="clickable" onclick="openModal(&#39;modalDetail&#39;);">
-                                                        <td class="text-center"></td>
-                                                        <td>ITEM 2<img class="img-fluid mx-2 float-start" src="../assets/img/7fc4f9f6c04863bc4d3555f13a0fc602.jpg" width="48px"></td>
+                                                        <td>ITEM 1<img class="img-fluid mx-2 float-start" src="../assets/img/7fc4f9f6c04863bc4d3555f13a0fc602.jpg" width="48px"></td>
                                                         <td class="text-center">IT-2</td>
+                                                        <td class="text-center">Toko ABC</td>
                                                         <td class="text-end">20</td>
                                                         <td class="text-end">120.000</td>
                                                         <td class="text-end">240.000</td>
-                                                        <td class="text-center"><a class="link-danger" href="#"><i class="fa fa-remove border-danger text-danger"></i>&nbsp;Hapus</a>&nbsp; |<a class="link-primary px-1" href="#">&nbsp;Pilih Supplier</a></td>
+                                                        <td class="text-center"><a class="link-danger" href="#"><i class="fa fa-remove border-danger text-danger"></i>&nbsp;Hapus</a></td>
                                                     </tr>
                                                     <tr class="clickable" onclick="openModal(&#39;modalDetail&#39;);">
-                                                        <td class="text-center"></td>
-                                                        <td>ITEM 2<img class="img-fluid mx-2 float-start" src="../assets/img/7fc4f9f6c04863bc4d3555f13a0fc602.jpg" width="48px"></td>
+                                                        <td>ITEM 1<img class="img-fluid mx-2 float-start" src="../assets/img/7fc4f9f6c04863bc4d3555f13a0fc602.jpg" width="48px"></td>
                                                         <td class="text-center">IT-2</td>
+                                                        <td class="text-center">Toko ABC</td>
                                                         <td class="text-end">20</td>
                                                         <td class="text-end">120.000</td>
                                                         <td class="text-end">240.000</td>
-                                                        <td class="text-center"><a class="link-danger" href="#"><i class="fa fa-remove border-danger text-danger"></i>&nbsp;Hapus</a>&nbsp; |<a class="link-primary px-1" href="#">&nbsp;Pilih Supplier</a></td>
-                                                    </tr>
-                                                    <tr class="clickable" onclick="openModal(&#39;modalDetail&#39;);">
-                                                        <td class="text-center" click="openModal('modalWarning');"></td>
-                                                        <td>ITEM 2<img class="img-fluid mx-2 float-start" src="../assets/img/7fc4f9f6c04863bc4d3555f13a0fc602.jpg" width="48px"></td>
-                                                        <td class="text-center">IT-2</td>
-                                                        <td class="text-end">20</td>
-                                                        <td class="text-end">120.000</td>
-                                                        <td class="text-end">240.000</td>
-                                                        <td class="text-center"><a class="link-danger px-1" href="#"><i class="fa fa-remove border-danger text-danger"></i>&nbsp;Hapus</a>&nbsp;|<a class="link-primary px-1" href="#">&nbsp;Pilih Supplier</a></td>
+                                                        <td class="text-center"><a class="link-danger" href="#"><i class="fa fa-remove border-danger text-danger"></i>&nbsp;Hapus</a></td>
                                                     </tr>
                                                     <tr class="clickable">
-                                                        <td class="text-center" click="openModal('modalWarning');"></td>
-                                                        <td class="font-weight-bold" colspan="4" style="font-weight: bold;">TOTAL</td>
-                                                        <td class="text-end" style="font-weight: bold;">1.920.000</td>
+                                                        <td colspan="5" style="font-weight: bold;">TOTAL</td>
+                                                        <td class="text-end" style="font-weight: bold;">1.680.000</td>
+                                                        <td class="text-end" style="font-weight: bold;"></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
                                 </div>
-                                <hr class="my-4">
+                                <hr class="my-5">
                                 <div class="row mt-3">
-                                    <div class="col"><label class="form-label"><strong>Keranjang Item Supplier Toko ABC</strong></label>
+                                    <div class="col"><label class="form-label"><strong>Keranjang Item Supplier Toko XYZ</strong></label>
                                         <div class="row mb-4">
                                             <div class="col pl-2">
                                                 <p class="description mb-0">Alamat</p>
-                                                <p class="subtitle small mb-2">Jln. Merdeka No. 9, Surabaya</p>
+                                                <p class="subtitle small mb-2">Jln. Letjen Sutoyo, Malang</p>
                                             </div>
                                         </div>
                                     </div>
@@ -339,33 +336,69 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" role="dialog" tabindex="-1" id="modalItem">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal fade" role="dialog" tabindex="-1" id="modalFirstItem">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Daftar Item</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h4 class="modal-title">Daftar Item Belum Ada Supplier</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="row mx-0 mb-3">
+                    <p class="small">Silahkan memilih supplier dari daftar item dibawah ini</p>
+                    <div class="row mx-0 mb-1">
                         <div class="col-12 input-group px-0 input-group-sm searchbar"><input type="text" class="form-control" placeholder="Kode / Nama Item"><span class="input-group-text"><img class="icon" src="../assets/img/search.svg" width="10"></span></div>
                     </div>
-                    <div class="table-responsive table general-table table-sm mb-0 pt-0">
-                        <table class="table mt-3">
-                            <thead>
+                    <div class="table-responsive table table-sm mb-0 pt-0">
+                        <table class="table table-borderless mt-3">
+                            <tbody>
+                                <tr>
+                                    <td class="text-center" rowspan="2"></td>
+                                    <td class="text-start">Nama</td>
+                                    <td class="text-center">Kode</td>
+                                    <td class="text-end">Qty</td>
+                                    <td class="text-end" rowspan="2">Harga/Unit</td>
+                                    <td class="text-end" rowspan="2">Total Sub Harga</td>
+                                </tr>
                                 <tr></tr>
-                            </thead>
-                            <tbody class="no-border">
-                                <tr class="sub-header no-border">
-                                    <td class="col-3">Nama</td>
-                                    <td class="col-3">Kode</td>
+                                <tr class="clickable" onclick="openModal(&#39;modalDetail&#39;);">
+                                    <td class="text-center"></td>
+                                    <td>ITEM 1<img class="img-fluid mx-2 float-start" src="../assets/img/7fc4f9f6c04863bc4d3555f13a0fc602.jpg" width="48px"></td>
+                                    <td class="text-center">IT-1</td>
+                                    <td class="text-end">100</td>
+                                    <td class="text-end">120.000</td>
+                                    <td class="text-end">1.200.000</td>
+                                    <td class="text-center"><a class="link-danger" href="#"><i class="fa fa-remove border-danger text-danger"></i>&nbsp;Hapus</a>&nbsp; |<a class="link-primary px-1" href="#">&nbsp;Pilih Supplier</a></td>
                                 </tr>
-                                <tr class="clickable" onclick="openModal(&#39;modalItemNew&#39;)">
-                                    <td class="col-3">ITEM 1</td>
-                                    <td class="col-3">IT-1</td>
+                                <tr class="clickable" onclick="openModal(&#39;modalDetail&#39;);">
+                                    <td class="text-center"></td>
+                                    <td>ITEM 2<img class="img-fluid mx-2 float-start" src="../assets/img/7fc4f9f6c04863bc4d3555f13a0fc602.jpg" width="48px"></td>
+                                    <td class="text-center">IT-2</td>
+                                    <td class="text-end">20</td>
+                                    <td class="text-end">120.000</td>
+                                    <td class="text-end">240.000</td>
+                                    <td class="text-center"><a class="link-danger" href="#"><i class="fa fa-remove border-danger text-danger"></i>&nbsp;Hapus</a>&nbsp; |<a class="link-primary px-1" href="#">&nbsp;Pilih Supplier</a></td>
                                 </tr>
-                                <tr class="clickable" onclick="openModal(&#39;modalItemNew&#39;);">
-                                    <td class="col-3">ITEM 2</td>
-                                    <td class="col-3">IT-2</td>
+                                <tr class="clickable" onclick="openModal(&#39;modalDetail&#39;);">
+                                    <td class="text-center"></td>
+                                    <td>ITEM 2<img class="img-fluid mx-2 float-start" src="../assets/img/7fc4f9f6c04863bc4d3555f13a0fc602.jpg" width="48px"></td>
+                                    <td class="text-center">IT-2</td>
+                                    <td class="text-end">20</td>
+                                    <td class="text-end">120.000</td>
+                                    <td class="text-end">240.000</td>
+                                    <td class="text-center"><a class="link-danger" href="#"><i class="fa fa-remove border-danger text-danger"></i>&nbsp;Hapus</a>&nbsp; |<a class="link-primary px-1" href="#">&nbsp;Pilih Supplier</a></td>
+                                </tr>
+                                <tr class="clickable" onclick="openModal(&#39;modalDetail&#39;);">
+                                    <td class="text-center" click="openModal('modalWarning');"></td>
+                                    <td>ITEM 2<img class="img-fluid mx-2 float-start" src="../assets/img/7fc4f9f6c04863bc4d3555f13a0fc602.jpg" width="48px"></td>
+                                    <td class="text-center">IT-2</td>
+                                    <td class="text-end">20</td>
+                                    <td class="text-end">120.000</td>
+                                    <td class="text-end">240.000</td>
+                                    <td class="text-center"><a class="link-danger px-1" href="#"><i class="fa fa-remove border-danger text-danger"></i>&nbsp;Hapus</a>&nbsp;|<a class="link-primary px-1" href="#">&nbsp;Pilih Supplier</a></td>
+                                </tr>
+                                <tr class="clickable">
+                                    <td class="text-center" click="openModal('modalWarning');"></td>
+                                    <td class="font-weight-bold" colspan="4" style="font-weight: bold;">TOTAL</td>
+                                    <td class="text-end" style="font-weight: bold;">1.920.000</td>
                                 </tr>
                             </tbody>
                         </table>
