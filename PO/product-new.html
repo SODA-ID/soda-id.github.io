@@ -53,8 +53,8 @@
                             <p class="mb-0 description">Pembelian</p>
                         </div>
                     </div>
-                    <div class="dropend position-absolute" style="width: 175px;"><a class="btn btn-link text-start link-dark minititle px-2 ml-2" aria-expanded="false" data-bs-toggle="dropdown" role="button" style="width: 165px;">&nbsp;Cari Barang</a>
-                        <div class="dropdown-menu"><a class="dropdown-item" onclick="location.href=&#39;/PO/product-create.html&#39;">Tambah Barang</a><a class="dropdown-item" onclick="location.href=&#39;/PO/product-new.html&#39;">Barang Baru</a><a class="dropdown-item" onclick="location.href=&#39;/PO/searchproduct.html&#39;">Barang Lama</a></div>
+                    <div class="dropend position-absolute" style="width: 175px;"><a class="btn btn-link text-start link-dark minititle px-2 ml-2" aria-expanded="false" data-bs-toggle="dropdown" role="button" style="width: 165px;">&nbsp;Cari Item</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" onclick="location.href=&#39;/PO/product-create.html&#39;">Tambah Item</a><a class="dropdown-item" onclick="location.href=&#39;/PO/product-new.html&#39;">Item Baru</a><a class="dropdown-item" onclick="location.href=&#39;/PO/searchproduct.html&#39;">Item Lama</a></div>
                     </div>
                     <div class="row mx-0 icon-wrapper">
                         <div class="col py-2 clickable">
@@ -63,7 +63,7 @@
                     </div>
                     <div class="row mx-0 icon-wrapper" onclick="location.href=&#39;/PO/cart.html&#39;">
                         <div class="col py-2 clickable">
-                            <p class="mb-0 minititle">Keranjang Barang<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
+                            <p class="mb-0 minititle">Keranjang Pembelian<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
                         </div>
                     </div>
                     <div class="row mx-0 icon-wrapper">
@@ -98,10 +98,10 @@
                             <div class="col px-3 position-relative">
                                 <div class="row py-2 mt-4 mb-3">
                                     <div class="col">
-                                        <p class="mb-0 title">Daftar barang yang belum dibeli</p>
+                                        <p class="mb-0 title">Daftar Item Belum Pernah Dibeli</p>
                                         <ol class="breadcrumb">
                                             <li class="breadcrumb-item"><a class="text-hover" href="#">Pembelian</a></li>
-                                            <li class="breadcrumb-item"><a class="active" href="#">Daftar Barang Belum Dibeli</a></li>
+                                            <li class="breadcrumb-item"><a class="active" href="#">Daftar Item Belum Pernah Dibeli</a></li>
                                         </ol>
                                     </div>
                                 </div>
@@ -121,21 +121,19 @@
                                         <div class="table-responsive table table-sm mb-0 pt-0">
                                             <table class="table table-borderless mt-3">
                                                 <tbody>
-                                                    <tr>
-                                                        <td class="text-center" rowspan="2"><input type="checkbox"></td>
+                                                    <tr onclick="openModal(&#39;modalDetail&#39;)">
                                                         <td class="text-start" rowspan="2">Nama</td>
                                                         <td class="text-center" rowspan="2">Kode</td>
                                                         <td class="text-center col-3" rowspan="2">Tanggal Pembuatan</td>
                                                         <td class="text-end" rowspan="2">Harga Item</td>
                                                         <td class="text-center" colspan="3">Stok Gudang</td>
                                                     </tr>
-                                                    <tr>
+                                                    <tr onclick="openModal(&#39;modalDetail&#39;)">
                                                         <td class="text-end">Sekarang<i class="fa fa-sort mx-1"></i></td>
                                                         <td class="text-end">Minimal<i class="fa fa-sort mx-1"></i></td>
                                                         <td class="text-end">Rekomendasi<i class="fa fa-sort mx-1"></i></td>
                                                     </tr>
-                                                    <tr class="clickable">
-                                                        <td class="text-center"><input type="checkbox" onclick="openModal(&#39;modalDetail&#39;);"></td>
+                                                    <tr class="clickable" onclick="openModal(&#39;modalDetail&#39;)">
                                                         <td>ITEM 1<img class="img-fluid mx-2 float-start" src="../assets/img/7fc4f9f6c04863bc4d3555f13a0fc602.jpg" width="48px"></td>
                                                         <td class="text-center">IT-1</td>
                                                         <td class="text-center">22-12-2021</td>
@@ -144,8 +142,7 @@
                                                         <td class="text-end">10</td>
                                                         <td class="text-end">10</td>
                                                     </tr>
-                                                    <tr class="clickable">
-                                                        <td class="text-center"><input type="checkbox" onclick="openModal(&#39;modalDetail&#39;);"></td>
+                                                    <tr class="clickable" onclick="openModal(&#39;modalDetail&#39;)">
                                                         <td>ITEM 2<img class="img-fluid mx-2 float-start" src="../assets/img/7fc4f9f6c04863bc4d3555f13a0fc602.jpg" width="48px"></td>
                                                         <td class="text-center">IT-2</td>
                                                         <td class="text-center">23-12-2021</td>
@@ -154,8 +151,7 @@
                                                         <td class="text-end">15</td>
                                                         <td class="text-end">15</td>
                                                     </tr>
-                                                    <tr class="clickable">
-                                                        <td class="text-center"><input type="checkbox" onclick="openModal(&#39;modalDetail&#39;);"></td>
+                                                    <tr class="clickable" onclick="openModal(&#39;modalDetail&#39;)">
                                                         <td>ITEM 2<img class="img-fluid mx-2 float-start" src="../assets/img/7fc4f9f6c04863bc4d3555f13a0fc602.jpg" width="48px"></td>
                                                         <td class="text-center">IT-2</td>
                                                         <td class="text-center">23-12-2021</td>
@@ -164,8 +160,7 @@
                                                         <td class="text-end">15</td>
                                                         <td class="text-end">15</td>
                                                     </tr>
-                                                    <tr class="clickable">
-                                                        <td class="text-center" click="openModal('modalWarning');"><input type="checkbox" onclick="openModal(&#39;modalDetail&#39;);"></td>
+                                                    <tr class="clickable" onclick="openModal(&#39;modalDetail&#39;)">
                                                         <td>ITEM 2<img class="img-fluid mx-2 float-start" src="../assets/img/7fc4f9f6c04863bc4d3555f13a0fc602.jpg" width="48px"></td>
                                                         <td class="text-center">IT-2</td>
                                                         <td class="text-center">23-12-2021</td>
@@ -174,8 +169,7 @@
                                                         <td class="text-end">10</td>
                                                         <td class="text-end">10</td>
                                                     </tr>
-                                                    <tr class="clickable">
-                                                        <td class="text-center"><input type="checkbox" onclick="openModal(&#39;modalDetail&#39;);"></td>
+                                                    <tr class="clickable" onclick="openModal(&#39;modalDetail&#39;)">
                                                         <td>ITEM 2<img class="img-fluid mx-2 float-start" src="../assets/img/7fc4f9f6c04863bc4d3555f13a0fc602.jpg" width="48px"></td>
                                                         <td class="text-center">IT-2</td>
                                                         <td class="text-center">23-12-2021</td>
@@ -194,7 +188,10 @@
                                         <div class="row">
                                             <div class="col">
                                                 <div class="row mx-0 py-2 bg-white">
-                                                    <div class="justify-content-end col-12 input-group px-2 input-group-sm searchbar"><a class="btn btn-primary px-3" role="button" onclick="location.href=&#39;/PO/cart.html&#39;">Lihat Keranjang Pembelian</a></div>
+                                                    <div class="col input-group px-2 input-group-sm searchbar">
+                                                        <p class="mb-0 minititle link-icon">3 Item Dikeranjang</p>
+                                                    </div>
+                                                    <div class="justify-content-end col input-group px-2 input-group-sm searchbar"><a class="btn btn-primary px-3" role="button" onclick="location.href=&#39;/PO/cart.html&#39;">Lihat Keranjang Pembelian</a></div>
                                                 </div>
                                             </div>
                                         </div>

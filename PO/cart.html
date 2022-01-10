@@ -53,8 +53,8 @@
                             <p class="mb-0 description">Pembelian</p>
                         </div>
                     </div>
-                    <div class="dropend position-absolute" style="width: 175px;"><a class="btn btn-link text-start link-dark minititle px-2 ml-2" aria-expanded="false" data-bs-toggle="dropdown" role="button" style="width: 165px;">&nbsp;Cari Barang</a>
-                        <div class="dropdown-menu"><a class="dropdown-item" onclick="location.href=&#39;/PO/product-create.html&#39;">Tambah Barang</a><a class="dropdown-item" onclick="location.href=&#39;/PO/product-new.html&#39;">Barang Baru</a><a class="dropdown-item" onclick="location.href=&#39;/PO/searchproduct.html&#39;">Barang Lama</a></div>
+                    <div class="dropend position-absolute" style="width: 175px;"><a class="btn btn-link text-start link-dark minititle px-2 ml-2" aria-expanded="false" data-bs-toggle="dropdown" role="button" style="width: 165px;">&nbsp;Cari Item</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" onclick="location.href=&#39;/PO/product-create.html&#39;">Tambah Item</a><a class="dropdown-item" onclick="location.href=&#39;/PO/product-new.html&#39;">Item Baru</a><a class="dropdown-item" onclick="location.href=&#39;/PO/searchproduct.html&#39;">Item Lama</a></div>
                     </div>
                     <div class="row mx-0 icon-wrapper">
                         <div class="col py-2 clickable">
@@ -106,7 +106,8 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-12"><label class="form-label"><strong>Item</strong></label></div>
+                                    <div class="col"><label class="form-label"><strong>Item Keranjang Tidak Ada Supplier</strong></label></div>
+                                    <div class="text-end col"><label class="form-label mx-3"><strong>Total 1.920.000</strong></label><button class="btn btn-primary" type="button" onclick="location.href=&#39;/PO/create.html&#39;">Buat PO Item Ini</button></div>
                                 </div>
                                 <div class="row mt-2 mx-0 mb-3">
                                     <div class="col-12 bg-white">
@@ -129,6 +130,7 @@
                                                         <td class="text-end">100</td>
                                                         <td class="text-end">120.000</td>
                                                         <td class="text-end">1.200.000</td>
+                                                        <td class="text-center"><a class="link-danger" href="#"><i class="fa fa-remove border-danger text-danger"></i>&nbsp;Hapus</a>&nbsp; |<a class="link-primary px-1" href="#">&nbsp;Pilih Supplier</a></td>
                                                     </tr>
                                                     <tr class="clickable" onclick="openModal(&#39;modalDetail&#39;);">
                                                         <td class="text-center"></td>
@@ -137,6 +139,7 @@
                                                         <td class="text-end">20</td>
                                                         <td class="text-end">120.000</td>
                                                         <td class="text-end">240.000</td>
+                                                        <td class="text-center"><a class="link-danger" href="#"><i class="fa fa-remove border-danger text-danger"></i>&nbsp;Hapus</a>&nbsp; |<a class="link-primary px-1" href="#">&nbsp;Pilih Supplier</a></td>
                                                     </tr>
                                                     <tr class="clickable" onclick="openModal(&#39;modalDetail&#39;);">
                                                         <td class="text-center"></td>
@@ -145,6 +148,7 @@
                                                         <td class="text-end">20</td>
                                                         <td class="text-end">120.000</td>
                                                         <td class="text-end">240.000</td>
+                                                        <td class="text-center"><a class="link-danger" href="#"><i class="fa fa-remove border-danger text-danger"></i>&nbsp;Hapus</a>&nbsp; |<a class="link-primary px-1" href="#">&nbsp;Pilih Supplier</a></td>
                                                     </tr>
                                                     <tr class="clickable" onclick="openModal(&#39;modalDetail&#39;);">
                                                         <td class="text-center" click="openModal('modalWarning');"></td>
@@ -153,6 +157,7 @@
                                                         <td class="text-end">20</td>
                                                         <td class="text-end">120.000</td>
                                                         <td class="text-end">240.000</td>
+                                                        <td class="text-center"><a class="link-danger px-1" href="#"><i class="fa fa-remove border-danger text-danger"></i>&nbsp;Hapus</a>&nbsp;|<a class="link-primary px-1" href="#">&nbsp;Pilih Supplier</a></td>
                                                     </tr>
                                                     <tr class="clickable">
                                                         <td class="text-center" click="openModal('modalWarning');"></td>
@@ -164,12 +169,78 @@
                                         </div>
                                     </div>
                                 </div>
+                                <hr class="my-4">
+                                <div class="row mt-3">
+                                    <div class="col"><label class="form-label"><strong>Keranjang Item Supplier Toko ABC</strong></label>
+                                        <div class="row mb-4">
+                                            <div class="col pl-2">
+                                                <p class="description mb-0">Alamat</p>
+                                                <p class="subtitle small mb-2">Jln. Merdeka No. 9, Surabaya</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-end col"><label class="form-label mx-2"><strong>Total 1.680.000</strong></label><button class="btn btn-primary" type="button" onclick="location.href=&#39;/PO/create.html&#39;">Buat PO dari Supplier</button></div>
+                                </div>
+                                <div class="row mt-2 mx-0 mb-3">
+                                    <div class="col-12 bg-white">
+                                        <div class="table-responsive table table-sm mb-0 pt-0">
+                                            <table class="table table-borderless mt-3">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-start">Nama</td>
+                                                        <td class="text-center">Kode</td>
+                                                        <td class="text-center">Supplier</td>
+                                                        <td class="text-end">Qty</td>
+                                                        <td class="text-end">Harga/Unit</td>
+                                                        <td class="text-end">Total Sub Harga</td>
+                                                        <td class="text-end col"></td>
+                                                    </tr>
+                                                    <tr></tr>
+                                                    <tr class="clickable" onclick="openModal(&#39;modalDetail&#39;);">
+                                                        <td>ITEM 1<img class="img-fluid mx-2 float-start" src="../assets/img/7fc4f9f6c04863bc4d3555f13a0fc602.jpg" width="48px"></td>
+                                                        <td class="text-center">IT-1</td>
+                                                        <td class="text-center">Toko ABC</td>
+                                                        <td class="text-end">100</td>
+                                                        <td class="text-end">120.000</td>
+                                                        <td class="text-end">1.200.000</td>
+                                                        <td class="text-center"><a class="link-danger" href="#"><i class="fa fa-remove border-danger text-danger"></i>&nbsp;Hapus</a></td>
+                                                    </tr>
+                                                    <tr class="clickable" onclick="openModal(&#39;modalDetail&#39;);">
+                                                        <td>ITEM 1<img class="img-fluid mx-2 float-start" src="../assets/img/7fc4f9f6c04863bc4d3555f13a0fc602.jpg" width="48px"></td>
+                                                        <td class="text-center">IT-2</td>
+                                                        <td class="text-center">Toko ABC</td>
+                                                        <td class="text-end">20</td>
+                                                        <td class="text-end">120.000</td>
+                                                        <td class="text-end">240.000</td>
+                                                        <td class="text-center"><a class="link-danger" href="#"><i class="fa fa-remove border-danger text-danger"></i>&nbsp;Hapus</a></td>
+                                                    </tr>
+                                                    <tr class="clickable" onclick="openModal(&#39;modalDetail&#39;);">
+                                                        <td>ITEM 1<img class="img-fluid mx-2 float-start" src="../assets/img/7fc4f9f6c04863bc4d3555f13a0fc602.jpg" width="48px"></td>
+                                                        <td class="text-center">IT-2</td>
+                                                        <td class="text-center">Toko ABC</td>
+                                                        <td class="text-end">20</td>
+                                                        <td class="text-end">120.000</td>
+                                                        <td class="text-end">240.000</td>
+                                                        <td class="text-center"><a class="link-danger" href="#"><i class="fa fa-remove border-danger text-danger"></i>&nbsp;Hapus</a></td>
+                                                    </tr>
+                                                    <tr class="clickable">
+                                                        <td colspan="5" style="font-weight: bold;">TOTAL</td>
+                                                        <td class="text-end" style="font-weight: bold;">1.680.000</td>
+                                                        <td class="text-end" style="font-weight: bold;"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="d-xl-flex fixed-bottom" style="left: 15.5em; right: .25em;">
                                     <div class="col-12">
                                         <div class="row">
                                             <div class="col">
                                                 <div class="row mx-0 py-2 bg-white">
-                                                    <div class="justify-content-end col-12 input-group px-2 input-group-sm searchbar"><a class="btn btn-primary px-3" role="button" onclick="location.href=&#39;/PO/create.html&#39;">Buat PO Item Ini</a></div>
+                                                    <div class="col input-group px-2 input-group-sm searchbar">
+                                                        <p class="mb-0 minititle link-icon">2 Keranjang</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

@@ -53,8 +53,8 @@
                             <p class="mb-0 description">Pembelian</p>
                         </div>
                     </div>
-                    <div class="dropend position-absolute" style="width: 175px;"><a class="btn btn-link text-start link-dark minititle px-2 ml-2" aria-expanded="false" data-bs-toggle="dropdown" role="button" style="width: 165px;">&nbsp;Cari Barang</a>
-                        <div class="dropdown-menu"><a class="dropdown-item" onclick="location.href=&#39;/PO/product-create.html&#39;">Tambah Barang</a><a class="dropdown-item" onclick="location.href=&#39;/PO/product-new.html&#39;">Barang Baru</a><a class="dropdown-item" onclick="location.href=&#39;/PO/searchproduct.html&#39;">Barang Lama</a></div>
+                    <div class="dropend position-absolute" style="width: 175px;"><a class="btn btn-link text-start link-dark minititle px-2 ml-2" aria-expanded="false" data-bs-toggle="dropdown" role="button" style="width: 165px;">&nbsp;Cari Item</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" onclick="location.href=&#39;/PO/product-create.html&#39;">Tambah Item</a><a class="dropdown-item" onclick="location.href=&#39;/PO/product-new.html&#39;">Item Baru</a><a class="dropdown-item" onclick="location.href=&#39;/PO/searchproduct.html&#39;">Item Lama</a></div>
                     </div>
                     <div class="row mx-0 icon-wrapper">
                         <div class="col py-2 clickable">
@@ -63,7 +63,7 @@
                     </div>
                     <div class="row mx-0 icon-wrapper" onclick="location.href=&#39;/PO/cart.html&#39;">
                         <div class="col py-2 clickable">
-                            <p class="mb-0 minititle">Keranjang Barang<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
+                            <p class="mb-0 minititle">Keranjang Pembelian<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
                         </div>
                     </div>
                     <div class="row mx-0 icon-wrapper">
@@ -98,16 +98,16 @@
                             <div class="col px-3 position-relative">
                                 <div class="row py-2 mt-4 mb-3">
                                     <div class="col">
-                                        <p class="mb-0 title">Daftar barang yang pernah dibeli</p>
+                                        <p class="mb-0 title">Daftar Pembelian Item</p>
                                         <ol class="breadcrumb">
                                             <li class="breadcrumb-item"><a class="text-hover" href="#">Pembelian</a></li>
-                                            <li class="breadcrumb-item"><a class="active" href="#">Daftar Pembelian Barang</a></li>
+                                            <li class="breadcrumb-item"><a class="active" href="#">Daftar Pembelian Item</a></li>
                                         </ol>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-12">
-                                        <div class="row">
+                                        <div class="row mb-2">
                                             <div class="col">
                                                 <div class="row mx-0 py-2" style="background-color: #efeff3;">
                                                     <div class="col-12 input-group px-2 input-group-sm searchbar"><input type="text" class="form-control" placeholder="Cari Kode / Nama Item"><span class="input-group-text"><img class="icon" src="../assets/img/search.svg" width="10"></span></div>
@@ -122,83 +122,71 @@
                                             <table class="table table-borderless mt-3">
                                                 <tbody>
                                                     <tr>
-                                                        <td class="text-center" rowspan="2"><input type="checkbox"></td>
                                                         <td class="text-start" rowspan="2">Nama</td>
                                                         <td class="text-center" rowspan="2">Kode</td>
-                                                        <td class="text-center col-3" colspan="2">Tanggal</td>
+                                                        <td class="text-center col-3">Tanggal</td>
                                                         <td class="text-end" rowspan="2">Qty</td>
                                                         <td class="text-end" rowspan="2">Harga Item</td>
-                                                        <td class="text-center" rowspan="2">Supplier<i class="fa fa-sort mx-1"></i></td>
+                                                        <td class="text-center" rowspan="2">Supplier</td>
                                                         <td class="text-center" colspan="3">Stok Gudang</td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="text-center">Pembelian</td>
-                                                        <td class="text-center">Penerimaan</td>
+                                                        <td class="text-center">Pembelian | Penerimaan</td>
                                                         <td class="text-end">Sekarang<i class="fa fa-sort mx-1"></i></td>
                                                         <td class="text-end">Minimal<i class="fa fa-sort mx-1"></i></td>
                                                         <td class="text-end">Rekomendasi<i class="fa fa-sort mx-1"></i></td>
                                                     </tr>
-                                                    <tr class="clickable">
-                                                        <td class="text-center"><input type="checkbox" onclick="openModal(&#39;modalProductSupplier&#39;);"></td>
+                                                    <tr class="clickable" onclick="openModal(&#39;modalConfirmationSupplier&#39;);">
                                                         <td>ITEM 1<img class="img-fluid mx-2 float-start" src="../assets/img/7fc4f9f6c04863bc4d3555f13a0fc602.jpg" width="48px"></td>
                                                         <td class="text-center">IT-1</td>
-                                                        <td class="text-center">22-12-2021</td>
-                                                        <td class="text-center">28-12-2021</td>
+                                                        <td class="text-center">22-12-2021 |&nbsp;28-12-2021</td>
                                                         <td class="text-end">100</td>
                                                         <td class="text-end">120.000</td>
-                                                        <td class="text-center">Toko ABC</td>
+                                                        <td class="text-center">Toko ABC <br>Malang<a class="d-block my-1" href="#" onclick="openModal(&#39;modalProductDuplicateSupplier&#39;)">Ada Supplier Lain</a></td>
                                                         <td class="text-end">30</td>
                                                         <td class="text-end">10</td>
                                                         <td class="text-end">0</td>
                                                     </tr>
-                                                    <tr class="clickable">
-                                                        <td class="text-center"><input type="checkbox" onclick="openModal(&#39;modalProductSupplier&#39;);"></td>
+                                                    <tr class="clickable" onclick="openModal(&#39;modalConfirmationSupplier&#39;);">
                                                         <td>ITEM 2<img class="img-fluid mx-2 float-start" src="../assets/img/7fc4f9f6c04863bc4d3555f13a0fc602.jpg" width="48px"></td>
                                                         <td class="text-center">IT-2</td>
-                                                        <td class="text-center">23-12-2021</td>
-                                                        <td class="text-center">28-12-2021</td>
+                                                        <td class="text-center">23-12-2021 |&nbsp;28-12-2021</td>
                                                         <td class="text-end">20</td>
                                                         <td class="text-end">120.000</td>
-                                                        <td class="text-center">Toko XYZ</td>
+                                                        <td class="text-center">Toko XYZ <br>Surabaya<a class="d-block my-1" href="#" onclick="openModal(&#39;modalProductDuplicateSupplier&#39;)">Ada Supplier Lain</a></td>
                                                         <td class="text-end">10</td>
                                                         <td class="text-end">15</td>
                                                         <td class="text-end">5</td>
                                                     </tr>
-                                                    <tr class="clickable">
-                                                        <td class="text-center"><input type="checkbox" onclick="openModal(&#39;modalProductSupplier&#39;);"></td>
+                                                    <tr class="clickable" onclick="openModal(&#39;modalConfirmationSupplier&#39;);">
                                                         <td>ITEM 2<img class="img-fluid mx-2 float-start" src="../assets/img/7fc4f9f6c04863bc4d3555f13a0fc602.jpg" width="48px"></td>
                                                         <td class="text-center">IT-2</td>
-                                                        <td class="text-center">23-12-2021</td>
-                                                        <td class="text-center">28-12-2021</td>
+                                                        <td class="text-center">23-12-2021 |&nbsp;28-12-2021</td>
                                                         <td class="text-end">20</td>
                                                         <td class="text-end">120.000</td>
-                                                        <td class="text-center">Toko XYZ</td>
+                                                        <td class="text-center">Toko XYZ <br>Surabaya</td>
                                                         <td class="text-end">10</td>
                                                         <td class="text-end">15</td>
                                                         <td class="text-end">5</td>
                                                     </tr>
-                                                    <tr class="clickable">
-                                                        <td class="text-center" click="openModal('modalWarning');"><input type="checkbox" onclick="openModal(&#39;modalProductSupplier&#39;);"></td>
+                                                    <tr class="clickable" onclick="openModal(&#39;modalConfirmationSupplier&#39;);">
                                                         <td>ITEM 2<img class="img-fluid mx-2 float-start" src="../assets/img/7fc4f9f6c04863bc4d3555f13a0fc602.jpg" width="48px"></td>
                                                         <td class="text-center">IT-2</td>
-                                                        <td class="text-center">23-12-2021</td>
-                                                        <td class="text-center">28-12-2021</td>
+                                                        <td class="text-center">23-12-2021 |&nbsp;28-12-2021</td>
                                                         <td class="text-end">20</td>
                                                         <td class="text-end">120.000</td>
-                                                        <td class="text-center">Toko XYZ</td>
+                                                        <td class="text-center">Toko QWEASD<br>Malang<a class="d-block my-1" href="#" onclick="openModal(&#39;modalProductDuplicateSupplier&#39;)">Ada Supplier Lain</a></td>
                                                         <td class="text-end">5</td>
                                                         <td class="text-end">10</td>
                                                         <td class="text-end">5</td>
                                                     </tr>
-                                                    <tr class="clickable">
-                                                        <td class="text-center"><input type="checkbox" onclick="openModal(&#39;modalProductSupplier&#39;);"></td>
+                                                    <tr class="clickable" onclick="openModal(&#39;modalConfirmationSupplier&#39;);">
                                                         <td>ITEM 2<img class="img-fluid mx-2 float-start" src="../assets/img/7fc4f9f6c04863bc4d3555f13a0fc602.jpg" width="48px"></td>
                                                         <td class="text-center">IT-2</td>
-                                                        <td class="text-center">23-12-2021</td>
-                                                        <td class="text-center">28-12-2021</td>
+                                                        <td class="text-center">23-12-2021 |&nbsp;28-12-2021</td>
                                                         <td class="text-end">20</td>
                                                         <td class="text-end">120.000</td>
-                                                        <td class="text-center">Toko ABC</td>
+                                                        <td class="text-center">Toko ABC <br>Malang</td>
                                                         <td class="text-end">10</td>
                                                         <td class="text-end">15</td>
                                                         <td class="text-end">5</td>
@@ -208,12 +196,15 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="d-xl-flex fixed-bottom" style="left: 15.5em; right: .25em;">
+                                <div class="d-xl-flex fixed-bottom" style="left: 15.5em; right: .40em;">
                                     <div class="col-12">
                                         <div class="row">
                                             <div class="col">
                                                 <div class="row mx-0 py-2 bg-white">
-                                                    <div class="justify-content-end col-12 input-group px-2 input-group-sm searchbar"><a class="btn btn-primary px-3" role="button" onclick="location.href=&#39;/PO/cart.html&#39;">Lihat Keranjang Pembelian</a></div>
+                                                    <div class="col input-group px-2">
+                                                        <p class="mb-0 minititle link-icon">3 Item Dikeranjang</p>
+                                                    </div>
+                                                    <div class="justify-content-end col input-group px-2 input-group-sm searchbar"><a class="btn btn-primary px-3" role="button" onclick="location.href=&#39;/PO/cart.html&#39;">Lihat Keranjang Pembelian</a></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -345,7 +336,7 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" role="dialog" tabindex="-1" id="modalProductSupplier">
+    <div class="modal fade" role="dialog" tabindex="-1" id="modalConfirmationSupplier">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -354,11 +345,11 @@
                 <div class="modal-body">
                     <div class="row mx-0 my-2">
                         <div class="col-12 input-group px-0 input-group-sm searchbar">
-                            <p class="subtitle small mb-0">Apakah ingin menambahkan barang lain dari supplier ini ?</p>
+                            <p class="subtitle small mb-0">Apakah ingin menambahkan item lain dari supplier ini ?</p>
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer"><button class="btn btn-primary btn-block w-100" type="button" onclick="openModal(&#39;modalItemHistory&#39;);">Iya, Lihat Barang Lain dari Supplier Ini</button><button class="btn btn-light btn-block w-100" type="button" onclick="openModal(&#39;modalDetail&#39;)">Tidak, Hanya Barang Ini Saja</button></div>
+                <div class="modal-footer"><button class="btn btn-primary btn-block w-100" type="button" onclick="openModal(&#39;modalProductSupplier&#39;);">Iya, Lihat Item Lain Dari Supplier Ini</button><button class="btn btn-light btn-block w-100" type="button" onclick="openModal(&#39;modalDetail&#39;)">Tidak, Tambah Item Ini Saja</button></div>
             </div>
         </div>
     </div>
@@ -378,14 +369,121 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" role="dialog" tabindex="-1" id="modalItemHistory">
+    <div class="modal fade" role="dialog" tabindex="-1" id="modalProductDuplicateSupplier">
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Daftar Pembelian Barang Supplier</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row mb-4">
+                        <div class="col-auto"><img src="../assets/img/7fc4f9f6c04863bc4d3555f13a0fc602.jpg" width="96px"></div>
+                        <div class="col pl-2">
+                            <p class="description mb-0">Nama Item</p>
+                            <p class="subtitle small mb-2">Iphone 13 Pro - Red Edition 1 TB&nbsp;</p>
+                            <p class="description mb-0">Kode Item</p>
+                            <p class="subtitle small mb-2">IT-12327810&nbsp;</p>
+                        </div>
+                        <div class="col pl-2">
+                            <p class="description mb-0">Berat Item</p>
+                            <p class="subtitle small mb-2">1 KG</p>
+                        </div>
+                    </div>
+                    <div class="table-responsive table table-sm mb-2 pt-0">
+                        <table class="table table-bordered mt-3">
+                            <tbody>
+                                <tr>
+                                    <td class="text-center col-2" rowspan="">Supplier</td>
+                                    <td class="text-end" rowspan="">Harga Item<i class="fa fa-sort mx-1"></i></td>
+                                    <td class="text-end" rowspan="2">Biaya Pengiriman<i class="fa fa-sort mx-1"></i></td>
+                                    <td class="text-end" rowspan="2">Total Biaya<i class="fa fa-sort mx-1"></i></td>
+                                    <td class="text-end" rowspan="2">Estimasi Lama Pengiriman<i class="fa fa-sort mx-1"></i></td>
+                                    <td class="text-center">Pembelian Terakhir</td>
+                                </tr>
+                                <tr></tr>
+                                <tr class="clickable" onclick="openModal(&#39;modalDetail&#39;)">
+                                    <td class="col-2">Toko ABC<br>Malang</td>
+                                    <td class="text-end">120.000</td>
+                                    <td class="text-end">5.000</td>
+                                    <td class="text-end">125.000</td>
+                                    <td class="text-end">1-2 Hari</td>
+                                    <td class="text-center">28-12-2021</td>
+                                </tr>
+                                <tr class="clickable" onclick="openModal(&#39;modalDetail&#39;)">
+                                    <td class="col-2">Toko ADA<br>Surabaya</td>
+                                    <td class="text-end">110.000</td>
+                                    <td class="text-end">8.000</td>
+                                    <td class="text-end">118.000</td>
+                                    <td class="text-end">2-3 Hari</td>
+                                    <td class="text-center">28-12-2021</td>
+                                </tr>
+                                <tr class="clickable" onclick="openModal(&#39;modalDetail&#39;)">
+                                    <td class="col-2">Toko JAYASEN<br>Jakarta</td>
+                                    <td class="text-end">90.000</td>
+                                    <td class="text-end">18.000</td>
+                                    <td class="text-end">108.000</td>
+                                    <td class="text-end">3-4 Hari</td>
+                                    <td class="text-center">28-12-2021</td>
+                                </tr>
+                                <tr class="clickable" onclick="openModal(&#39;modalDetail&#39;)">
+                                    <td class="col-2">Toko XYZ<br>Surabaya</td>
+                                    <td class="text-end">115.000</td>
+                                    <td class="text-end">7.000</td>
+                                    <td class="text-end">123.000</td>
+                                    <td class="text-end">2-3 Hari</td>
+                                    <td class="text-center">28-12-2021</td>
+                                </tr>
+                                <tr class="clickable" onclick="openModal(&#39;modalDetail&#39;)">
+                                    <td class="col-2">Toko SENTOSA<br>Malang</td>
+                                    <td class="text-end">125.000</td>
+                                    <td class="text-end">5.000</td>
+                                    <td class="text-end">130.000</td>
+                                    <td class="text-end">1-2 Hari</td>
+                                    <td class="text-center">28-12-2021</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="text-start description mb-0">*&nbsp;klik untuk menambahkan ke Keranjang<br></p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light btn-block w-100" type="button">Lihat Keranjang Pembelian</button></div>
+                <div class="modal fade" role="dialog" tabindex="-1" id="modalStatusSo-4">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Status SO</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p class="small text-success mb-1">Diterbitkan</p>
+                                <p class="small">Dokumen SO sudah di-input kedalam sistem dan dalam keadaan aktif(tidak di void)</p>
+                                <p class="small text-danger mb-1">Dibatalkan</p>
+                                <p class="small">Dokumen SO sudah diterbitkan dan telah dibatalkan.</p>
+                            </div>
+                            <div class="modal-footer"><button class="btn btn-light btn-block w-100" type="button">Ok</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modalProductSupplier">
         <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Daftar Item dari Supplier ABC</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="row mx-0 mb-3">
+                    <div class="row mb-4">
+                        <div class="col pl-2">
+                            <p class="description mb-0">Nama Supplier</p>
+                            <p class="subtitle small mb-2">Toko ABC</p>
+                        </div>
+                        <div class="col pl-2">
+                            <p class="description mb-0">Alamat</p>
+                            <p class="subtitle small mb-2">Jln. Merdeka Malang</p>
+                        </div>
+                    </div>
+                    <div class="row mx-0 mb-2">
                         <div class="col-12 input-group px-0 input-group-sm searchbar"><input type="text" class="form-control" placeholder="Kode / Nama Item"><span class="input-group-text"><img class="icon" src="../assets/img/search.svg" width="10"></span></div>
                     </div>
                     <div class="table-responsive table table-sm mb-2 pt-0">
@@ -394,10 +492,10 @@
                                 <tr>
                                     <td class="text-center col-2" rowspan="">Nama</td>
                                     <td class="text-center" rowspan="">Kode</td>
-                                    <td class="text-center" rowspan="">Harga Item<i class="fa fa-sort mx-1"></i></td>
-                                    <td class="text-center" rowspan="2">Stok Saat Ini<i class="fa fa-sort mx-1"></i></td>
-                                    <td class="text-center" rowspan="2">Minimal Stok<i class="fa fa-sort mx-1"></i></td>
-                                    <td class="text-center" rowspan="2">Stok Level (%)<i class="fa fa-sort mx-1"></i></td>
+                                    <td class="text-end" rowspan="">Harga Item<i class="fa fa-sort mx-1"></i></td>
+                                    <td class="text-end" rowspan="2">Stok Saat Ini<i class="fa fa-sort mx-1"></i></td>
+                                    <td class="text-end" rowspan="2">Minimal Stok<i class="fa fa-sort mx-1"></i></td>
+                                    <td class="text-end" rowspan="2">Stok Level (%)<i class="fa fa-sort mx-1"></i></td>
                                     <td class="text-center">Pembelian Terakhir</td>
                                 </tr>
                                 <tr></tr>
@@ -452,7 +550,7 @@
                     <p class="text-start description mb-0">*&nbsp;klik untuk menambahkan ke Keranjang<br></p>
                 </div>
                 <div class="modal-footer"><button class="btn btn-light btn-block w-100" type="button">Lihat Keranjang Pembelian</button></div>
-                <div class="modal fade" role="dialog" tabindex="-1" id="modalStatusSo-4">
+                <div class="modal fade" role="dialog" tabindex="-1" id="modalStatusSo-7">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
