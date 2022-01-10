@@ -120,18 +120,126 @@
                 <div class="content scroll">
                     <div>
                         <div class="row mx-0 mb-5 pb-4">
-                            <div class="col px-3 position-relative">
+                            <div class="col px-3">
                                 <div class="row py-2 mt-4 mb-3">
                                     <div class="col">
-                                        <p class="mb-0 title">Tambah Item Baru</p>
+                                        <p class="mb-0 title">Input SO</p>
                                         <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a class="text-hover" href="#">Pembelian</a></li>
-                                            <li class="breadcrumb-item"><a class="active" href="#">Tambah Item Baru</a></li>
+                                            <li class="breadcrumb-item"><a class="text-hover" href="#">SO Pembelian</a></li>
+                                            <li class="breadcrumb-item"><a class="active" href="#">Input SO&nbsp;</a></li>
                                         </ol>
                                     </div>
                                 </div>
-                                <div class="row mt-2 mx-0">
+                                <div class="row">
+                                    <div class="col-12 px-3"><label class="form-label"><strong>Informasi SO</strong></label></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 px-3">
+                                        <div class="row mx-0 bg-white py-3">
+                                            <div class="col-4 px-2">
+                                                <div class="row mb-2">
+                                                    <div class="col-12"><label class="form-label text-muted">No. SO</label><input type="text" class="form-control form-control-sm" placeholder="No. Dokumen SO"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 px-2">
+                                                <div class="row mb-2">
+                                                    <div class="col-12"><label class="form-label text-muted">Tanggal SO</label><input type="text" class="form-control form-control-sm" placeholder="DD/MM/YYYY"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 px-2">
+                                                <div class="row mb-2">
+                                                    <div class="col-12"><label class="form-label text-muted">No. PO (opsional)</label><input type="text" class="form-control form-control-sm" placeholder="No. Dokumen PO"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <hr class="mt-2 mb-2">
+                                            </div>
+                                            <div class="col-4 px-2"><label class="form-label text-muted">Penerima</label>
+                                                <p class="mb-0 subtitle small text-capitalize">Skytech Lenmarc<br></p>
+                                                <p class="mb-0 description black">Lenmarc Mall Surabaya<br></p>
+                                                <p class="mb-0 description text-muted">08113530030<br></p><a href="#">Ubah</a>
+                                            </div>
+                                            <div class="col-4 px-2"><label class="form-label text-muted">Supplier</label>
+                                                <p class="mb-0 subtitle small text-capitalize">Vernon</p>
+                                                <p class="mb-0 description black">Jl. Letjen Sutoyo 103<br></p>
+                                                <p class="mb-0 description text-muted">0812345678<br></p><a href="#">Ubah</a>
+                                            </div>
+                                            <div class="col-4 px-2"><label class="form-label text-muted">Catatan (opsional)</label><textarea class="form-control no-resize" rows="3"></textarea></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-12 px-3"><label class="form-label"><strong>Item SO</strong></label></div>
+                                </div>
+                                <div class="row">
                                     <div class="col-12">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="row mx-0 bg-white py-2">
+                                                    <div class="col pr-0"><input type="text" class="form-control" placeholder="Nama Item"></div>
+                                                    <div class="col-auto">
+                                                        <p class="link-icon browse-icon" onclick="openModal(&#39;modalItem&#39;);"><img src="../assets/img/browse.svg" width="16"></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-2 mx-0">
+                                    <div class="col-12 bg-white">
+                                        <div class="table-responsive table general-table table-sm mb-0">
+                                            <table class="table mt-3">
+                                                <thead class="no-border">
+                                                    <tr class="no-border"></tr>
+                                                </thead>
+                                                <tbody class="no-border">
+                                                    <tr class="sub-header no-top">
+                                                        <td class="col-2">Kode</td>
+                                                        <td class="col-3">Nama</td>
+                                                        <td class="col-1">Qty</td>
+                                                        <td class="text-end col-2 text-right">Harga/Unit<br>(excl ppn)</td>
+                                                        <td class="text-end col-2 text-right">Harga/Unit<br>(incl ppn)</td>
+                                                        <td class="text-end col-2 text-right">Diskon/Unit<br>(incl ppn)</td>
+                                                        <td class="text-end col-2 text-right">Nett/Unit<br>(incl ppn)</td>
+                                                        <td class="text-end col-2 text-right">Total<br>(incl ppn)</td>
+                                                    </tr>
+                                                    <tr class="clickable" onclick="openModal(&#39;modalDetail&#39;)">
+                                                        <td class="col-2">IT-1</td>
+                                                        <td class="col-3">ITEM 1</td>
+                                                        <td class="col-1">2</td>
+                                                        <td class="text-end col-2">10.000</td>
+                                                        <td class="text-end col-2 text-right">11.000</td>
+                                                        <td class="text-end col-2 text-right">0</td>
+                                                        <td class="text-end col-2 text-right">11.000</td>
+                                                        <td class="text-end col-2 text-right">22.000</td>
+                                                    </tr>
+                                                    <tr class="clickable" onclick="openModal(&#39;modalDetail&#39;)">
+                                                        <td class="col-2">IT-2</td>
+                                                        <td class="col-3">ITEM 2</td>
+                                                        <td class="col-1">2</td>
+                                                        <td class="text-end col-2">10.000</td>
+                                                        <td class="text-end col-2 text-right">10.000</td>
+                                                        <td class="text-end col-2 text-right">0</td>
+                                                        <td class="text-end col-2 text-right">10.000</td>
+                                                        <td class="text-end col-2 text-right">20.000</td>
+                                                    </tr>
+                                                    <tr class="clickable no-bottom" onclick="openModal(&#39;modalDetail&#39;)">
+                                                        <td class="col-2">IT-3</td>
+                                                        <td class="col-3">ITEM 3</td>
+                                                        <td class="col-1">4</td>
+                                                        <td class="text-end col-2">5.000</td>
+                                                        <td class="text-end col-2 text-right">5.500</td>
+                                                        <td class="text-end col-2 text-right">0</td>
+                                                        <td class="text-end col-2 text-right">5.500</td>
+                                                        <td class="text-end col-2 text-right">22.000</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-2 mx-0">
+                                    <div class="col-12 bg-white">
                                         <div class="table-responsive table general-table table-sm mb-0">
                                             <table class="table mt-3">
                                                 <thead class="no-border">
@@ -139,70 +247,55 @@
                                                 </thead>
                                                 <tbody class="no-border">
                                                     <tr>
-                                                        <td class="text-start col-2">Jenis Item</td>
-                                                        <td class="text-end col-4 text-right"><select class="form-select form-select-sm" placeholder="Pilih" value="Pilih">
-                                                                <option value="12" selected="">Produk</option>
-                                                                <option value="13">Jasa</option>
-                                                            </select></td>
+                                                        <td class="text-start col-4" colspan="2">Total Sebelum Pajak</td>
+                                                        <td class="text-end col-4 text-right"><input type="text" class="form-control form-control-sm" style="text-align: right;" placeholder="Nominal" value="60.000"></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="text-start col-2">Kode Item</td>
-                                                        <td class="text-end col-2 text-right"><input type="text" class="form-control form-control-sm" placeholder="Kode Barang"></td>
+                                                        <td class="text-start col-4" colspan="2">Cash Diskon (opsional)</td>
+                                                        <td class="text-end col-2 text-right"><input type="text" class="form-control form-control-sm" style="text-align: right;" placeholder="Nominal" value="6.000"></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="text-start col-2" colspan="">Nama Item</td>
-                                                        <td class="text-end col-4 text-right"><input type="text" class="form-control form-control-sm" placeholder="Nama Barang"></td>
+                                                        <td class="text-start col-3" colspan="2">Grand Total (excl ppn)</td>
+                                                        <td class="text-end col-4 text-right"><input type="text" class="form-control form-control-sm" style="text-align: right;" placeholder="Nominal" value="54.000"></td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="text-start col-2">Spesifikasi Item</td>
-                                                        <td class="text-start col-2"><textarea class="form-control form-control-sm" rows="3" style="resize:none;" placeholder="Spesifikasi Barang"></textarea></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-start col-2">Kelompok</td>
-                                                        <td class="text-end col-4 text-right"><select class="form-select form-select-sm" placeholder="Pilih" value="Pilih">
-                                                                <option value="12" selected="">Smartphone</option>
-                                                                <option value="14">Laptop</option>
-                                                                <option value="15">Printer</option>
-                                                                <option value="16">Monitor</option>
-                                                                <option value="13">Jasa</option>
-                                                            </select></td>
-                                                    </tr>
-                                                    <tr class="no-bottom">
-                                                        <td class="text-start col-2">Jenis Pajak</td>
-                                                        <td class="text-end col-4 text-right"><select class="form-select form-select-sm" placeholder="Pilih" value="Pilih">
-                                                                <option value="12">PPN</option>
-                                                                <option value="13">FREE</option>
-                                                            </select></td>
-                                                    </tr>
-                                                    <tr class="no-bottom">
-                                                        <td class="text-start col-2">Margin</td>
+                                                        <td class="text-start col-4">PPN</td>
                                                         <td class="text-end col-2 text-right">
-                                                            <div class="input-group"><input type="text" class="form-control form-control-sm" placeholder="Nominal" value="10">
+                                                            <div class="input-group"><input type="text" class="form-control form-control-sm" style="text-align: right;" placeholder="Nominal" value="10">
                                                                 <div class="input-group-append">
-                                                                    <p class="input-group-text mb-0" style="border-bottom-left-radius: 0;border-top-left-radius: 0;">%</p>
+                                                                    <p class="input-group-text mb-0">%</p>
                                                                 </div>
                                                             </div>
                                                         </td>
+                                                        <td class="text-start col-2"><input type="text" class="form-control form-control-sm" style="text-align: right;" placeholder="Nominal" value="5.400"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-start col-4" colspan="2"><strong>Grand Total (incl ppn)</strong></td>
+                                                        <td class="text-end col-4 text-right"><input type="text" class="form-control form-control-sm" style="text-align: right;" placeholder="Nominal" value="59.400"></td>
                                                     </tr>
                                                     <tr class="no-bottom">
-                                                        <td class="text-start col-2">Estimasi Berat</td>
-                                                        <td class="text-end col-4 text-right"><input type="text" class="form-control form-control-sm" placeholder="Estimasi Berat"></td>
-                                                    </tr>
-                                                    <tr class="no-bottom">
-                                                        <td class="text-start col-2">Gambar</td>
-                                                        <td class="text-end col-4 text-start"><img class="float-start" src="../assets/img/Screen%20Shot%202022-01-06%20at%2007.54.16.png" width="780px"></td>
+                                                        <td class="text-start col-4" colspan="2">Uang Muka (opsional)</td>
+                                                        <td class="text-end col-4 text-right"><input type="text" class="form-control form-control-sm" style="text-align: right;" placeholder="Nominal" value="9.400"></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="d-xl-flex fixed-bottom" style="left: 15.5em; right: .25em;">
-                                    <div class="col-12">
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="row mx-0 py-2 bg-white">
-                                                    <div class="justify-content-end col-12 input-group px-2 input-group-sm searchbar"><a class="btn btn-primary px-3" role="button" onclick="openModal(&#39;modalInfoCart&#39;)">Tambah Barang</a></div>
+                                <div class="row mt-3">
+                                    <div class="col-12 px-3"><label class="form-label"><strong>Lampiran&nbsp;</strong></label></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 px-3">
+                                        <div class="row mx-0 bg-white py-3">
+                                            <div class="col-12 px-2">
+                                                <div class="row mb-2">
+                                                    <div class="col-12"><label class="form-label text-muted">Unggah Dokumen SO (opsional)</label>
+                                                        <div class="border p-4 clickable">
+                                                            <p class="description text-muted mb-0" style="text-align: center;">Unggah</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 mt-3"><label class="form-label text-muted">Tambahkan Tagging Dokumen (opsional)&nbsp;</label><input type="text" class="form-control mb-2" placeholder="Isi dengan format &quot;judul:nilai&quot;, tekan enter untuk menambahkan"><span class="link-icon small py-1 px-2 tag">Judul Tag : Nilai Tag | X</span></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -215,7 +308,7 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" role="dialog" tabindex="-1" id="modalDetailOld">
+    <div class="modal fade" role="dialog" tabindex="-1" id="modalDetail">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -331,215 +424,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" role="dialog" tabindex="-1" id="modalInfoCart">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title mx-1">Konfirmasi</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row mx-0 my-2">
-                        <div class="col-12 input-group px-0 input-group-sm searchbar">
-                            <p class="subtitle small mb-0">Tambahkan Barang ke Keranjang Pembelian ?</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer"><button class="btn btn-primary btn-block w-100" type="button" onclick="openModal(&#39;modalDetail&#39;);">Iya, Tambahkan Barang ke Keranjang</button><button class="btn btn-light btn-block w-100" type="button" onclick="closeModal(&#39;modalProductSupplier&#39;)">Tidak, Hanya Simpan Barang Saja</button></div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" role="dialog" tabindex="-1" id="modalDetail">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Detail Item</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-auto"><img src="../assets/img/7fc4f9f6c04863bc4d3555f13a0fc602.jpg" width="96px"></div>
-                        <div class="col pl-2">
-                            <p class="description mb-0">Nama Item</p>
-                            <p class="subtitle small mb-2">Iphone 13 Pro - Red Edition 1 TB&nbsp;</p>
-                            <p class="description mb-0">Kode Item</p>
-                            <p class="subtitle small mb-2">IT-12327810&nbsp;</p>
-                        </div>
-                    </div>
-                    <div class="row pt-3">
-                        <div class="col-12">
-                            <div class="table-responsive table general-table table-sm mb-0">
-                                <table class="table mt-3">
-                                    <thead>
-                                        <tr></tr>
-                                    </thead>
-                                    <tbody class="no-border">
-                                        <tr class="sub-header">
-                                            <td class="col-1">Qty</td>
-                                            <td class="text-end col-2 text-right">Harga/Unit<br></td>
-                                            <td class="text-end col-2 text-right">Total Sub Harga<br></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="col-1"><input type="text" class="form-control form-control-sm" style="text-align: right;" placeholder="Nominal" value="2"></td>
-                                            <td class="text-end col-2"><input type="text" class="form-control form-control-sm" style="text-align: right;" placeholder="Nominal" value="10.000"></td>
-                                            <td class="text-end col-2 text-right"><input type="text" class="form-control form-control-sm" style="text-align: right;" placeholder="Nominal" value="22.000"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <p class="text-start description mb-0">*&nbsp;Input bertanda * adalah opsional<br>** kosongkan qty untuk menghapus item dari daftar item SO</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer"><button class="btn btn-light btn-block w-100" type="button">Tambah Item Ke Keranjang</button></div>
-                <div class="modal fade" role="dialog" tabindex="-1" id="modalStatusSo-6">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 class="modal-title">Status SO</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <p class="small text-success mb-1">Diterbitkan</p>
-                                <p class="small">Dokumen SO sudah di-input kedalam sistem dan dalam keadaan aktif(tidak di void)</p>
-                                <p class="small text-danger mb-1">Dibatalkan</p>
-                                <p class="small">Dokumen SO sudah diterbitkan dan telah dibatalkan.</p>
-                            </div>
-                            <div class="modal-footer"><button class="btn btn-light btn-block w-100" type="button">Ok</button></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" role="dialog" tabindex="-1" id="modalStatusSo-5">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Status SO</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p class="small text-success mb-1">Diterbitkan</p>
-                    <p class="small">Dokumen SO sudah di-input kedalam sistem dan dalam keadaan aktif(tidak di void)</p>
-                    <p class="small text-danger mb-1">Dibatalkan</p>
-                    <p class="small">Dokumen SO sudah diterbitkan dan telah dibatalkan.</p>
-                </div>
-                <div class="modal-footer"><button class="btn btn-light btn-block w-100" type="button">Ok</button></div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" role="dialog" tabindex="-1" id="modalItemHistory">
-        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Daftar Item dari Supplier ABC</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row mx-0 mb-3">
-                        <div class="col-12 input-group px-0 input-group-sm searchbar"><input type="text" class="form-control" placeholder="Kode / Nama Item"><span class="input-group-text"><img class="icon" src="../assets/img/search.svg" width="10"></span></div>
-                    </div>
-                    <div class="table-responsive table table-sm mb-0 pt-0">
-                        <table class="table table-bordered mt-3">
-                            <tbody>
-                                <tr>
-                                    <td class="text-center" rowspan="2"><input type="checkbox"></td>
-                                    <td class="text-center col-2" rowspan="">Nama</td>
-                                    <td class="text-center" rowspan="">Kode</td>
-                                    <td class="text-center" rowspan="">Harga Item<i class="fa fa-sort mx-1"></i></td>
-                                    <td class="text-center" rowspan="2">Stok Saat Ini<i class="fa fa-sort mx-1"></i></td>
-                                    <td class="text-center" rowspan="2">Minimal Stok<i class="fa fa-sort mx-1"></i></td>
-                                    <td class="text-center" rowspan="2">Stok Level (%)<i class="fa fa-sort mx-1"></i></td>
-                                    <td class="text-center">Pembelian Terakhir</td>
-                                </tr>
-                                <tr></tr>
-                                <tr class="clickable">
-                                    <td class="text-center"><input type="checkbox"></td>
-                                    <td class="col-2">ITEM 1</td>
-                                    <td class="text-center">IT-1</td>
-                                    <td class="text-end">120.000</td>
-                                    <td class="text-end">30</td>
-                                    <td class="text-end">10</td>
-                                    <td class="text-end">0 %</td>
-                                    <td class="text-center">28-12-2021</td>
-                                </tr>
-                                <tr class="clickable">
-                                    <td class="text-center"><input type="checkbox"></td>
-                                    <td class="col-2">ITEM 2</td>
-                                    <td class="text-center">IT-2</td>
-                                    <td class="text-end">120.000</td>
-                                    <td class="text-end">10</td>
-                                    <td class="text-end">15</td>
-                                    <td class="text-end">2 %</td>
-                                    <td class="text-center">28-12-2021</td>
-                                </tr>
-                                <tr class="clickable">
-                                    <td class="text-center"><input type="checkbox"></td>
-                                    <td class="col-2">ITEM 2</td>
-                                    <td class="text-center">IT-2</td>
-                                    <td class="text-end">120.000</td>
-                                    <td class="text-end">10</td>
-                                    <td class="text-end">15</td>
-                                    <td class="text-end">2 %</td>
-                                    <td class="text-center">28-12-2021</td>
-                                </tr>
-                                <tr class="clickable">
-                                    <td class="text-center"><input type="checkbox"></td>
-                                    <td class="col-2">ITEM 2</td>
-                                    <td class="text-center">IT-2</td>
-                                    <td class="text-end">120.000</td>
-                                    <td class="text-end">10</td>
-                                    <td class="text-end">15</td>
-                                    <td class="text-end">2 %</td>
-                                    <td class="text-center">28-12-2021</td>
-                                </tr>
-                                <tr class="clickable">
-                                    <td class="text-center"><input type="checkbox"></td>
-                                    <td class="col-2">ITEM 2</td>
-                                    <td class="text-center">IT-2</td>
-                                    <td class="text-end">120.000</td>
-                                    <td class="text-end">10</td>
-                                    <td class="text-end">15</td>
-                                    <td class="text-end">2 %</td>
-                                    <td class="text-center">28-12-2021</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="modal-footer"><button class="btn btn-light btn-block w-100" type="button">Tambahkan ke Keranjang Pembelian</button></div>
-                <div class="modal fade" role="dialog" tabindex="-1" id="modalStatusSo-4">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 class="modal-title">Status SO</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <p class="small text-success mb-1">Diterbitkan</p>
-                                <p class="small">Dokumen SO sudah di-input kedalam sistem dan dalam keadaan aktif(tidak di void)</p>
-                                <p class="small text-danger mb-1">Dibatalkan</p>
-                                <p class="small">Dokumen SO sudah diterbitkan dan telah dibatalkan.</p>
-                            </div>
-                            <div class="modal-footer"><button class="btn btn-light btn-block w-100" type="button">Ok</button></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" role="dialog" tabindex="-1" id="modalProductSupplier-1">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title mx-1">Konfirmasi</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row mx-0 my-2">
-                        <div class="col-12 input-group px-0 input-group-sm searchbar">
-                            <p class="subtitle small mb-0">Apakah ingin menambahkan barang lain dari supplier ini ?</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer"><button class="btn btn-primary btn-block w-100" type="button" onclick="openModal(&#39;modalItemHistory&#39;);">Iya, Lihat Barang Lain dari Supplier Ini</button><button class="btn btn-light btn-block w-100" type="button" onclick="closeModal(&#39;modalProductSupplier&#39;)">Tidak, Cukup Barang Ini Saja</button></div>
             </div>
         </div>
     </div>

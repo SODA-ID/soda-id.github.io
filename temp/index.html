@@ -33,11 +33,11 @@
             </div>
         </div>
         <div class="body-center-wrapper">
-            <div class="body-center-submenu py-2">
+            <div class="body-center-submenu">
                 <div class="top">
                     <div class="row my-4 mx-0">
                         <div class="col-8">
-                            <p class="title mb-0">Penjualan</p>
+                            <p class="title mb-0">Pembelian</p>
                         </div>
                         <div class="col-4 d-flex justify-content-end">
                             <p class="link-icon"><img class="rotate-left" src="../assets/img/up-arrow-angle.svg" width="10"></p>
@@ -50,159 +50,73 @@
                 <div class="content scroll">
                     <div id="menu-transaction" class="row mx-0">
                         <div class="col-12 pt-2 pb-1">
-                            <p class="mb-0 description">Transaksi</p>
+                            <p class="mb-0 description">Pembelian</p>
                         </div>
+                    </div>
+                    <div class="dropend position-absolute" style="width: 175px;"><a class="btn btn-link text-start link-dark minititle px-2 ml-2" aria-expanded="false" data-bs-toggle="dropdown" role="button" style="width: 165px;">&nbsp;Cari Item</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" onclick="location.href=&#39;/PO/product-create.html&#39;">Tambah Item</a><a class="dropdown-item" onclick="location.href=&#39;/PO/product-new.html&#39;">Item Baru</a><a class="dropdown-item" onclick="location.href=&#39;/PO/searchproduct.html&#39;">Item Lama</a></div>
                     </div>
                     <div class="row mx-0 icon-wrapper">
                         <div class="col py-2 clickable">
-                            <p class="mb-0 minititle">Lihat Beranda<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
+                            <p class="mb-0 minititle"><span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
                         </div>
                     </div>
-                    <div class="row mx-0 icon-wrapper">
+                    <div class="row mx-0 icon-wrapper" onclick="location.href=&#39;/PO/cart.html&#39;">
                         <div class="col py-2 clickable">
-                            <p class="mb-0 minititle">Lihat Transaksi<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
+                            <p class="mb-0 minititle">Keranjang Pembelian<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
                         </div>
                     </div>
-                    <div class="row mx-0 icon-wrapper">
+                    <div class="row mx-0 icon-wrapper" onclick="location.href=&#39;/Product/hpp.html&#39;">
                         <div class="col py-2 clickable">
-                            <p class="mb-0 minititle">Buat Transaksi<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
+                            <p class="mb-0 minititle">Check HPP<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
                         </div>
                     </div>
-                    <div class="row mx-0 icon-wrapper">
-                        <div class="col py-2 clickable">
-                            <p class="mb-0 minititle">Edit Transaksi<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
-                        </div>
-                    </div>
-                    <div class="row mx-0 icon-wrapper">
-                        <div class="col py-2 clickable">
-                            <p class="mb-0 minititle">Void Transaksi<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
-                        </div>
-                    </div>
-                    <div id="menu-catalogue" class="row mx-0">
+                    <div id="menu-transaction-3" class="row mx-0">
                         <div class="col-12 pt-2 pb-1">
-                            <p class="mb-0 description">Katalog</p>
+                            <p class="mb-0 description">PO Pembelian</p>
                         </div>
                     </div>
                     <div class="row mx-0 icon-wrapper">
                         <div class="col py-2 clickable">
-                            <p class="mb-0 minititle">Lihat&nbsp; Produk<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
+                            <p class="mb-0 minititle">Lihat PO<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
+                        </div>
+                    </div>
+                    <div class="row mx-0 icon-wrapper" onclick="location.href=&#39;/PO/create.html&#39;">
+                        <div class="col py-2 clickable">
+                            <p class="mb-0 minititle">Input PO<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
                         </div>
                     </div>
                     <div class="row mx-0 icon-wrapper">
                         <div class="col py-2 clickable">
-                            <p class="mb-0 minititle">Tambah Produk<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
+                            <p class="mb-0 minititle">Batalkan PO<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
                         </div>
                     </div>
-                    <div class="row mx-0 icon-wrapper">
-                        <div class="col py-2 clickable">
-                            <p class="mb-0 minititle">Edit Produk<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
-                        </div>
-                    </div>
-                    <div class="row mx-0 icon-wrapper">
-                        <div class="col py-2 clickable">
-                            <p class="mb-0 minititle">Hapus Produk<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
-                        </div>
-                    </div>
-                    <div class="row mx-0 icon-wrapper">
-                        <div class="col py-2 clickable">
-                            <p class="mb-0 minititle">Aktifkan Produk<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
-                        </div>
-                    </div>
-                    <div class="row mx-0 icon-wrapper">
-                        <div class="col py-2 clickable">
-                            <p class="mb-0 minititle">Nonaktifkan Produk<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
-                        </div>
-                    </div>
-                    <div id="menu-transaction" class="row mx-0">
+                    <div id="menu-transaction-4" class="row mx-0">
                         <div class="col-12 pt-2 pb-1">
-                            <p class="mb-0 description">Harga</p>
+                            <p class="mb-0 description">SO Pembelian</p>
+                        </div>
+                    </div>
+                    <div class="row mx-0 icon-wrapper" onclick="location.href=&#39;/SO/index.html&#39;">
+                        <div class="col py-2 clickable">
+                            <p class="mb-0 minititle">Lihat SO<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
+                        </div>
+                    </div>
+                    <div class="row mx-0 icon-wrapper" onclick="location.href=&#39;/SO/create.html&#39;">
+                        <div class="col py-2 clickable">
+                            <p class="mb-0 minititle">Input SO<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
                         </div>
                     </div>
                     <div class="row mx-0 icon-wrapper">
                         <div class="col py-2 clickable">
-                            <p class="mb-0 minititle">Naikkan Harga<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
-                        </div>
-                    </div>
-                    <div class="row mx-0 icon-wrapper">
-                        <div class="col py-2 clickable">
-                            <p class="mb-0 minititle">Turunkan Harga<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
-                        </div>
-                    </div>
-                    <div class="row mx-0 icon-wrapper">
-                        <div class="col py-2 clickable">
-                            <p class="mb-0 minititle">Edit Harga<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
+                            <p class="mb-0 minititle">Batalkan SO<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
                         </div>
                     </div>
                     <div id="menu-transaction-2" class="row mx-0">
-                        <div class="col-12 pt-2 pb-1">
-                            <p class="mb-0 description">Pelanggan</p>
-                        </div>
-                    </div>
-                    <div class="row mx-0 icon-wrapper">
-                        <div class="col py-2 clickable">
-                            <p class="mb-0 minititle">Lihat Data Pelanggan<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
-                        </div>
-                    </div>
-                    <div class="row mx-0 icon-wrapper">
-                        <div class="col py-2 clickable">
-                            <p class="mb-0 minititle">Tambahkan Pelanggan<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
-                        </div>
-                    </div>
-                    <div class="row mx-0 icon-wrapper">
-                        <div class="col py-2 clickable">
-                            <p class="mb-0 minititle">Edit Data Pelangan<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
-                        </div>
-                    </div>
-                    <div class="row mx-0 icon-wrapper">
-                        <div class="col py-2 clickable">
-                            <p class="mb-0 minititle">Hapus Data Pelangan<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
-                        </div>
-                    </div>
-                    <div id="menu-transaction-1" class="row mx-0">
-                        <div class="col-12 pt-2 pb-1">
-                            <p class="mb-0 description">Promosi</p>
-                        </div>
-                    </div>
-                    <div class="row mx-0 icon-wrapper">
-                        <div class="col py-2 clickable">
-                            <p class="mb-0 minititle">Lihat Promosi<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
-                        </div>
-                    </div>
-                    <div class="row mx-0 icon-wrapper">
-                        <div class="col py-2 clickable">
-                            <p class="mb-0 minititle">Buat Promosi<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
-                        </div>
-                    </div>
-                    <div class="row mx-0 icon-wrapper">
-                        <div class="col py-2 clickable">
-                            <p class="mb-0 minititle">Ubah Promosi<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
-                        </div>
-                    </div>
-                    <div class="row mx-0 icon-wrapper">
-                        <div class="col py-2 clickable">
-                            <p class="mb-0 minititle">Batalkan Promosi<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
-                        </div>
-                    </div>
-                    <div class="row mx-0 icon-wrapper">
-                        <div class="col py-2 clickable">
-                            <p class="mb-0 minititle">Hapus Promosi<span class="pull-right"><img class="rotate-right icon icon text-small" src="../assets/img/up-arrow-angle.svg"></span></p>
-                        </div>
+                        <div class="col-12 pt-2 pb-1"></div>
                     </div>
                 </div>
             </div>
-            <div class="body-center-content py-2">
-                <div id="bottom-menu" class="content-menu-bottom p-2">
-                    <div class="row mx-0 content frost-card">
-                        <div class="col p-2 d-flex align-items-center">
-                            <div class="form-check align-self-center"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Pilih Semua</label></div>
-                        </div>
-                        <div class="col p-2 d-flex align-items-center justify-content-center">
-                            <p class="mb-0 description text-center">2 Dipilih</p>
-                        </div>
-                        <div class="col p-2 d-flex align-items-center justify-content-end"><button class="btn btn-primary btn-sm" type="button">Nonaktifkan Multiple</button></div>
-                    </div>
-                </div>
-            </div>
+            <div class="body-center-content py-2"></div>
         </div>
     </div>
     <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
