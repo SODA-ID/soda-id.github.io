@@ -147,71 +147,89 @@
                                                     <tr>
                                                         <td class="text-start" rowspan="2">Nama</td>
                                                         <td class="text-center" rowspan="2">Kode</td>
-                                                        <td class="text-center col-3">Tanggal</td>
-                                                        <td class="text-end" rowspan="2">Qty</td>
-                                                        <td class="text-end" rowspan="2">Harga Item</td>
+                                                        <td class="text-center col-3" colspan="4">Pembeliaan Terakhir</td>
                                                         <td class="text-center" rowspan="2">Supplier</td>
-                                                        <td class="text-center" colspan="3">Stok Gudang</td>
+                                                        <td class="text-center" colspan="5">Stok Gudang</td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="text-center">Pembelian | Penerimaan</td>
+                                                        <td class="text-center">Tgl Beli</td>
+                                                        <td class="text-center">Tgl Terima</td>
+                                                        <td class="text-center">Qty</td>
+                                                        <td class="text-center">Harga</td>
+                                                        <td class="text-end">Incoming<i class="fa fa-sort mx-1"></i></td>
                                                         <td class="text-end">Sekarang<i class="fa fa-sort mx-1"></i></td>
                                                         <td class="text-end">Minimal<i class="fa fa-sort mx-1"></i></td>
+                                                        <td class="text-end">Level<i class="fa fa-sort mx-1"></i></td>
                                                         <td class="text-end">Rekomendasi<i class="fa fa-sort mx-1"></i></td>
                                                     </tr>
                                                     <tr class="clickable" onclick="openModal(&#39;modalConfirmationSupplier&#39;);">
                                                         <td>ITEM 1<img class="img-fluid mx-2 float-start" src="../assets/img/7fc4f9f6c04863bc4d3555f13a0fc602.jpg" width="48px"></td>
                                                         <td class="text-center">IT-1</td>
-                                                        <td class="text-center">22-12-2021 |&nbsp;28-12-2021</td>
+                                                        <td class="text-center">22-12-2021</td>
+                                                        <td class="text-center">28-12-2021</td>
                                                         <td class="text-end">100</td>
                                                         <td class="text-end">120.000</td>
-                                                        <td class="text-center">Toko ABC <br>Malang<a class="d-block my-1" href="#" onclick="openModal(&#39;modalProductDuplicateSupplier&#39;)">Ada Supplier Lain</a></td>
+                                                        <td class="text-center"><a href="#" onclick="openModal(&#39;modalInfoSupplier&#39;)">Toko ABC<br>Malang</a><a class="d-block my-1" href="#" onclick="openModal(&#39;modalProductDuplicateSupplier&#39;)">Ada Supplier Lain</a></td>
+                                                        <td class="text-end">30</td>
                                                         <td class="text-end">30</td>
                                                         <td class="text-end">10</td>
+                                                        <td class="text-end">80%</td>
                                                         <td class="text-end">0</td>
                                                     </tr>
                                                     <tr class="clickable" onclick="openModal(&#39;modalConfirmationSupplier&#39;);">
                                                         <td>ITEM 2<img class="img-fluid mx-2 float-start" src="../assets/img/7fc4f9f6c04863bc4d3555f13a0fc602.jpg" width="48px"></td>
                                                         <td class="text-center">IT-2</td>
-                                                        <td class="text-center">23-12-2021 |&nbsp;28-12-2021</td>
+                                                        <td class="text-center">23-12-2021</td>
+                                                        <td class="text-center">28-12-2021</td>
                                                         <td class="text-end">20</td>
                                                         <td class="text-end">120.000</td>
-                                                        <td class="text-center">Toko XYZ <br>Surabaya<a class="d-block my-1" href="#" onclick="openModal(&#39;modalProductDuplicateSupplier&#39;)">Ada Supplier Lain</a></td>
+                                                        <td class="text-center"><a href="#" onclick="openModal(&#39;modalInfoSupplier&#39;)">Toko XYZ<br>Surabaya</a><a class="d-block my-1" href="#" onclick="openModal(&#39;modalProductDuplicateSupplier&#39;)">Ada Supplier Lain</a></td>
+                                                        <td class="text-end">10</td>
                                                         <td class="text-end">10</td>
                                                         <td class="text-end">15</td>
+                                                        <td class="text-end">90%</td>
                                                         <td class="text-end">5</td>
                                                     </tr>
                                                     <tr class="clickable" onclick="openModal(&#39;modalConfirmationSupplier&#39;);">
                                                         <td>ITEM 2<img class="img-fluid mx-2 float-start" src="../assets/img/7fc4f9f6c04863bc4d3555f13a0fc602.jpg" width="48px"></td>
                                                         <td class="text-center">IT-2</td>
-                                                        <td class="text-center">23-12-2021 |&nbsp;28-12-2021</td>
+                                                        <td class="text-center">23-12-2021</td>
+                                                        <td class="text-center">28-12-2021</td>
                                                         <td class="text-end">20</td>
                                                         <td class="text-end">120.000</td>
-                                                        <td class="text-center">Toko XYZ <br>Surabaya</td>
+                                                        <td class="text-center"><a href="#" onclick="openModal(&#39;modalInfoSupplier&#39;)">Toko XYZ<br>Surabaya</a></td>
+                                                        <td class="text-end">10</td>
                                                         <td class="text-end">10</td>
                                                         <td class="text-end">15</td>
+                                                        <td class="text-end">100%</td>
                                                         <td class="text-end">5</td>
                                                     </tr>
                                                     <tr class="clickable" onclick="openModal(&#39;modalConfirmationSupplier&#39;);">
                                                         <td>ITEM 2<img class="img-fluid mx-2 float-start" src="../assets/img/7fc4f9f6c04863bc4d3555f13a0fc602.jpg" width="48px"></td>
                                                         <td class="text-center">IT-2</td>
-                                                        <td class="text-center">23-12-2021 |&nbsp;28-12-2021</td>
+                                                        <td class="text-center">23-12-2021</td>
+                                                        <td class="text-center">28-12-2021</td>
                                                         <td class="text-end">20</td>
                                                         <td class="text-end">120.000</td>
-                                                        <td class="text-center">Toko QWEASD<br>Malang<a class="d-block my-1" href="#" onclick="openModal(&#39;modalProductDuplicateSupplier&#39;)">Ada Supplier Lain</a></td>
+                                                        <td class="text-center"><a href="#" onclick="openModal(&#39;modalInfoSupplier&#39;)">Toko QWEASD<br>Malang<br></a><a class="d-block my-1" href="#" onclick="openModal(&#39;modalProductDuplicateSupplier&#39;)">Ada Supplier Lain</a></td>
+                                                        <td class="text-end">5</td>
                                                         <td class="text-end">5</td>
                                                         <td class="text-end">10</td>
+                                                        <td class="text-end">120%</td>
                                                         <td class="text-end">5</td>
                                                     </tr>
                                                     <tr class="clickable" onclick="openModal(&#39;modalConfirmationSupplier&#39;);">
                                                         <td>ITEM 2<img class="img-fluid mx-2 float-start" src="../assets/img/7fc4f9f6c04863bc4d3555f13a0fc602.jpg" width="48px"></td>
                                                         <td class="text-center">IT-2</td>
-                                                        <td class="text-center">23-12-2021 |&nbsp;28-12-2021</td>
+                                                        <td class="text-center">23-12-2021</td>
+                                                        <td class="text-center">28-12-2021</td>
                                                         <td class="text-end">20</td>
                                                         <td class="text-end">120.000</td>
-                                                        <td class="text-center">Toko ABC <br>Malang</td>
+                                                        <td class="text-center"><a href="#" onclick="openModal(&#39;modalInfoSupplier&#39;)">Toko ABC<br>Malang<br></a></td>
+                                                        <td class="text-end">10</td>
                                                         <td class="text-end">10</td>
                                                         <td class="text-end">15</td>
+                                                        <td class="text-end">150%</td>
                                                         <td class="text-end">5</td>
                                                     </tr>
                                                 </tbody>
@@ -635,6 +653,46 @@
                 </div>
                 <div class="modal-footer"><button class="btn btn-light btn-block w-100" type="button">Tambahkan Item ke Keranjang</button></div>
                 <div class="modal fade" role="dialog" tabindex="-1" id="modalStatusSo-6">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Status SO</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p class="small text-success mb-1">Diterbitkan</p>
+                                <p class="small">Dokumen SO sudah di-input kedalam sistem dan dalam keadaan aktif(tidak di void)</p>
+                                <p class="small text-danger mb-1">Dibatalkan</p>
+                                <p class="small">Dokumen SO sudah diterbitkan dan telah dibatalkan.</p>
+                            </div>
+                            <div class="modal-footer"><button class="btn btn-light btn-block w-100" type="button">Ok</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modalInfoSupplier">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Detail Supplier</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col pl-2">
+                            <p class="description mb-0">Nama</p>
+                            <p class="text-end subtitle small mb-2">Toko ABC</p>
+                            <p class="description mb-0">Alamat</p>
+                            <p class="text-end subtitle small mb-2">Jln. Merbabu No. 9A, Malang</p>
+                            <p class="description mb-0">Jenis</p>
+                            <p class="text-end subtitle small mb-2">Ecommerce - Tokopedia&nbsp;&nbsp;<a href="#"><i class="fa fa-external-link"></i></a></p>
+                            <p class="description mb-0">Pembelian Terakhir</p>
+                            <p class="text-end subtitle small mb-2">28-12-2021</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer"></div>
+                <div class="modal fade" role="dialog" tabindex="-1" id="modalStatusSo-8">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
