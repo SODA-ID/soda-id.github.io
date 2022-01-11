@@ -157,3 +157,10 @@ To https://github.com/SODA-ID/soda-id.github.io.git
    d453c9c..00ff90b  main -> main
 
 
+----------
+
+Tue Jan 11 2022 07:41:22 GMT+0700 (Western Indonesia Time)
+
+fatal: unable to access 'https://github.com/SODA-ID/soda-id.github.io.git/': Could not resolve host: github.com
+
+
